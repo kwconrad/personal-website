@@ -13,7 +13,7 @@ export default function PrimaryLayout(props: Props) {
     <div className="w-full h-full flex flex-col bg-gray-1200">
       <Banner onClick={() => router.push("/contact")}>
         <span className="text-sm text-white font-bold">
-          Currently available for hire - Reach out to me!
+          🎊 Currently available for hire - Reach out to me!
         </span>
       </Banner>
       <Header>

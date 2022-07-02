@@ -50,7 +50,7 @@ export default function Navbar() {
       </div>
       <nav
         className={clsx(
-          "py-6 px-4 absolute top-20 sm:top-0 bottom-0 left-0 right-0 sm:relative sm:flex flex-col sm:flex-row gap-3 z-50 bg-gray-1200",
+          "py-6 px-4 absolute top-full sm:top-0 bottom-0 left-0 right-0 sm:relative sm:flex flex-col sm:flex-row gap-3 z-50 bg-gray-1200",
           {
             block: isOpen,
             hidden: !isOpen,

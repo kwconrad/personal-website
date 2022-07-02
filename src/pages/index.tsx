@@ -31,7 +31,7 @@ const Home = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  See Resumé
+                  Download Resumé
                 </a>
               </div>
               <div className="relative">

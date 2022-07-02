@@ -22,7 +22,30 @@ const Home = () => {
                 work with.
               </p>
             </div>
-            <div className="flex items-center gap-4"></div>
+            <div className="flex items-center gap-4">
+              <div className="relative">
+                <div className="absolute inset-0 bg-pink-600 rounded-full transition-all duration-150"></div>
+                <a
+                  className="relative px-6 py-3 bg-gray-1100 hover:bg-gray-900 text-sm text-white font-bold rounded-full transition-colors duration-150 ease-in-out"
+                  href="/cv-2022.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  See Resumé
+                </a>
+              </div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-pink-600 rounded-full transition-all duration-150"></div>
+                <a
+                  className="relative px-6 py-3 bg-gray-1100 hover:bg-gray-900 text-sm text-white font-bold rounded-full transition-colors duration-150 ease-in-out"
+                  href="https://dribbble.com/easternsun"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  See my work
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

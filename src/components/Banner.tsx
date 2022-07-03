@@ -8,7 +8,7 @@ interface Props {
 export default function Banner({ children, onClick }: Props) {
   return (
     <div
-      className="w-full h-16 flex items-center justify-center bg-pink-500 cursor-pointer"
+      className="w-full h-12 flex-shrink-0 flex items-center justify-center bg-pink-500 cursor-pointer"
       onClick={onClick}
     >
       {children}

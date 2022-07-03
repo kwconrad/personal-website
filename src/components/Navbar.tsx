@@ -1,11 +1,15 @@
+import { useRouter } from "next/router";
 import { IconClose, IconMenu } from "icons";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import useResizeObserver from "use-resize-observer";
-import Logo from "./Logo";
 import { motion, useAnimation } from "framer-motion";
+import { Logo } from "components";
+import { routes } from "lib";
 
 export default function Navbar() {
+  const router = useRouter();
+
   const [isOpen, setIsOpen] = useState(false);
   const handleToggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -50,7 +54,7 @@ export default function Navbar() {
       </div>
       <nav
         className={clsx(
-          "py-6 px-4 absolute top-20 sm:top-0 bottom-0 left-0 right-0 sm:relative sm:flex flex-col sm:flex-row gap-3 z-50 bg-gray-1200",
+          "py-6 px-4 absolute top-32 sm:top-0 bottom-0 left-0 right-0 sm:relative sm:flex flex-col sm:flex-row gap-3 z-50 bg-gray-1200",
           {
             block: isOpen,
             hidden: !isOpen,
@@ -58,22 +62,24 @@ export default function Navbar() {
         )}
       >
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-          <motion.a
+          <motion.button
             custom={0}
             initial={{ opacity: width < 640 ? 0 : 1 }}
             animate={controls}
-            href="#"
+            type="button"
+            onClick={() => router.push(routes.home)}
             className="py-1 px-2 flex items-center gap-2 hover:bg-purple-300/30 rounded-lg"
           >
             <div className="w-3 h-3 rounded-full bg-purple-600"></div>
             <span className="text-4xl sm:text-base font-bold text-purple-200">
               Home
             </span>
-          </motion.a>
-          <motion.a
+          </motion.button>
+          {/* <motion.button
             custom={1}
             initial={{ opacity: width < 640 ? 0 : 1 }}
             animate={controls}
+            type="button"
             href="#"
             className="py-1 px-2 flex items-center gap-2 hover:bg-red-300/30 rounded-lg"
           >
@@ -81,11 +87,12 @@ export default function Navbar() {
             <span className="text-4xl sm:text-base font-bold text-red-200">
               Projects
             </span>
-          </motion.a>
-          <motion.a
+          </motion.button>
+          <motion.button
             custom={2}
             initial={{ opacity: width < 640 ? 0 : 1 }}
             animate={controls}
+            type="button"
             href="#"
             className="py-1 px-2 flex items-center gap-2 hover:bg-orange-300/30 rounded-lg"
           >
@@ -93,19 +100,20 @@ export default function Navbar() {
             <span className="text-4xl sm:text-base font-bold text-orange-200">
               My story
             </span>
-          </motion.a>
-          <motion.a
+          </motion.button> */}
+          <motion.button
             custom={3}
             initial={{ opacity: width < 640 ? 0 : 1 }}
             animate={controls}
-            href="#"
+            type="button"
+            onClick={() => router.push(routes.contact)}
             className="py-1 px-2 flex items-center gap-2 hover:bg-green-300/30 rounded-lg"
           >
             <div className="w-3 h-3 rounded-full bg-green-600"></div>
             <span className="text-4xl sm:text-base font-bold text-green-200">
-              Contact me
+              Contact
             </span>
-          </motion.a>
+          </motion.button>
         </div>
       </nav>
     </header>

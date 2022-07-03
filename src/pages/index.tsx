@@ -22,9 +22,9 @@ const Home = () => {
                 that I work with.
               </p>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col md:flex-row items-center gap-4">
               <a
-                className="relative px-6 py-3 bg-white hover:bg-gray-400 text-sm text-gray-1200 font-bold rounded-full transition-colors duration-150 ease-in-out"
+                className="w-full md:w-auto px-6 py-3 bg-white hover:bg-gray-400 text-sm text-gray-1200 text-center font-bold rounded-full transition-colors duration-150 ease-in-out"
                 href="https://dribbble.com/easternsun"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -32,7 +32,7 @@ const Home = () => {
                 See my portfolio
               </a>
               <a
-                className="relative px-6 py-3 bg-gray-1000 hover:bg-gray-800 text-sm text-white font-bold rounded-full transition-colors duration-150 ease-in-out"
+                className="w-full md:w-auto px-6 py-3 bg-gray-1000 hover:bg-gray-800 text-sm text-white text-center font-bold rounded-full transition-colors duration-150 ease-in-out"
                 href="/cv-2022.pdf"
                 target="_blank"
                 rel="noopener noreferrer"

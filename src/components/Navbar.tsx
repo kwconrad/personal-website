@@ -9,6 +9,10 @@ import { routes } from "lib";
 
 export default function Navbar() {
   const router = useRouter();
+  const handleNavigateToRoute = (path: "home" | "contact") => {
+    setIsOpen(false);
+    router.push(routes[path]);
+  };
 
   const [isOpen, setIsOpen] = useState(false);
   const handleToggleNavbar = () => {
@@ -67,7 +71,7 @@ export default function Navbar() {
             initial={{ opacity: width < 640 ? 0 : 1 }}
             animate={controls}
             type="button"
-            onClick={() => router.push(routes.home)}
+            onClick={() => handleNavigateToRoute("home")}
             className="py-1 px-2 flex items-center gap-2 hover:bg-purple-300/30 rounded-lg"
           >
             <div className="w-3 h-3 rounded-full bg-purple-600"></div>
@@ -106,7 +110,7 @@ export default function Navbar() {
             initial={{ opacity: width < 640 ? 0 : 1 }}
             animate={controls}
             type="button"
-            onClick={() => router.push(routes.contact)}
+            onClick={() => handleNavigateToRoute("contact")}
             className="py-1 px-2 flex items-center gap-2 hover:bg-green-300/30 rounded-lg"
           >
             <div className="w-3 h-3 rounded-full bg-green-600"></div>

@@ -21,7 +21,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center gap-4">
               <a
-                className="relative px-6 py-3 bg-green-500 hover:bg-green-700 text-sm text-gray-1200 font-bold rounded-full transition-colors duration-150 ease-in-out"
+                className="w-full md:w-auto  px-6 py-3 bg-green-500 hover:bg-green-700 text-sm text-gray-1200 text-center font-bold rounded-full transition-colors duration-150 ease-in-out"
                 href="mailto:conradwebdev@gmail.com"
                 rel="noopener noreferrer"
               >

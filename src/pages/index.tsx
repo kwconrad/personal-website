@@ -17,9 +17,9 @@ const Home = () => {
               </h1>
               <p className="text-white">
                 Hi, I&apos;m Kyle. Finding creative solutions to tricky problems
-                has always been my joy in life. I try to bring that joy and
-                feeling of fun into every problem I solve, for the organizations
-                and individuals that I work with.
+                has always been one of my biggest joys in life. My goal is to
+                bring fun to the creative process as I build awesome things with
+                people and teams.
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-4">

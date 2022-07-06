@@ -13,13 +13,13 @@ const Home = () => {
           <div className="pb-16 flex flex-col gap-6">
             <div className="flex flex-col gap-3">
               <h1 className="text-4xl md:text-5xl font-bold text-white">
-                I craft product experiences
+                Just a dude, building awesome products with great people.
               </h1>
               <p className="text-white">
-                Finding creative solutions to tricky problems has always been my
-                joy in life. I try to bring that joy and feeling of fun into
-                every problem I solve, for the organizations and individuals
-                that I work with.
+                Hi, I&apos;m Kyle. Finding creative solutions to tricky problems
+                has always been my joy in life. I try to bring that joy and
+                feeling of fun into every problem I solve, for the organizations
+                and individuals that I work with.
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-4">

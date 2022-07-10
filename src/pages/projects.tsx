@@ -72,7 +72,7 @@ export default function WorkList({ projects }: Props) {
 }
 
 export async function getStaticProps() {
-  const projectsDir = path.join(process.cwd(), "src/pages/projects");
+  const projectsDir = path.join(process.cwd(), "src/_projects");
 
   const filenames = await promises.readdir(projectsDir);
 

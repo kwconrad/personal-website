@@ -14,6 +14,8 @@ const nextConfig = {
       use: ["@svgr/webpack"],
     });
 
+    config.resolve.fallback = { fs: false };
+
     return config;
   },
 };
@@ -23,6 +25,7 @@ const withMDX = createMDX({
   options: {
     remarkPlugins: [],
     rehypePlugins: [],
+    providerImportSource: "@mdx-js/react",
   },
 });
 

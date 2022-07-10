@@ -1,4 +1,7 @@
-import { MDXProvider } from "@mdx-js/react";
+import { readdirSync } from "fs";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { join } from "path";
+import { ParsedUrlQuery } from "querystring";
 import Image, { ImageProps } from "next/image";
 import React from "react";
 import { PrimaryLayout } from "layouts";
@@ -6,6 +9,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { routes } from "lib";
 import { IconArrowLeft } from "icons";
+import { MDXRemote } from "next-mdx-remote";
+import { getParsedFileContentBySlug, renderMarkdown } from "lib/markdown";
 
 const ResponsiveImage = (
   props: any // Figure out the props
@@ -36,21 +41,25 @@ const components = {
   ),
 };
 
-interface Props {
-  children: React.ReactNode;
-  meta: any;
+export interface ArticleProps extends ParsedUrlQuery {
+  slug: string;
 }
 
-export default function MarkdownLayout(props: Props) {
-  const { meta, children } = props;
+const PROJECTS_PATH = join(process.cwd(), "src/_projects");
 
+interface Props {
+  frontMatter: any;
+  html: any;
+}
+
+export function Project({ frontMatter, html }: Props) {
   return (
-    <MDXProvider components={components}>
+    <>
       <Head>
-        <title>{meta.title}</title>
+        <title>{frontMatter.title}</title>
       </Head>
       <PrimaryLayout>
-        <main className="mx-auto max-w-4xl w-full">
+        <main className="mx-auto pb-20 max-w-4xl w-full">
           <div className="py-4">
             <Link href={routes.projects}>
               <button className="flex items-center gap-2 group">
@@ -62,10 +71,10 @@ export default function MarkdownLayout(props: Props) {
             </Link>
           </div>
           <h1 className="text-3xl md:text-5xl font-bold text-white">
-            {meta.title}
+            {frontMatter.title}
           </h1>
           <div className="py-4 flex gap-3">
-            {meta.tags.map((tag: string) => (
+            {frontMatter.tags.map((tag: string) => (
               <div key={tag} className="px-2 py-1 bg-gray-800 rounded-full">
                 <p className="text-sm text-white font-bold">{tag}</p>
               </div>
@@ -76,36 +85,74 @@ export default function MarkdownLayout(props: Props) {
               <Image
                 layout="fill"
                 objectFit="cover"
-                alt={`${meta.title + "img"}`}
-                src={meta.cover}
+                alt={`${frontMatter.title + "img"}`}
+                src={frontMatter.cover}
               ></Image>
             </div>
           </div>
           <div className="mt-2 mb-6 p-6 bg-gray-900 rounded-lg">
             <div className="mb-6 flex flex-col gap-2">
               <p className="text-sm font-bold text-gray-100">Overview</p>
-              <p className="text-base text-white">{meta.overview}</p>
+              <p className="text-base text-white">{frontMatter.overview}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="flex flex-col gap-1">
                 <p className="text-sm font-bold text-gray-400">Approach</p>
                 <p className="text-base text-white">
-                  {meta.approach.join(", ")}
+                  {frontMatter.approach.join(", ")}
                 </p>
               </div>
               <div className="flex flex-col gap-1">
                 <p className="text-sm font-bold text-gray-400">Duration</p>
-                <p className="text-base text-white">{meta.duration}</p>
+                <p className="text-base text-white">{frontMatter.duration}</p>
               </div>
               <div className="flex flex-col gap-1">
                 <p className="text-sm font-bold text-gray-400">Role</p>
-                <p className="text-base text-white">{meta.role}</p>
+                <p className="text-base text-white">{frontMatter.role}</p>
               </div>
             </div>
           </div>
-          {children}
+          <MDXRemote {...html} components={components} />
         </main>
       </PrimaryLayout>
-    </MDXProvider>
+    </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const slug = ctx?.params?.slug as string;
+
+  if (!slug) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const articleMarkdownContent = getParsedFileContentBySlug(
+    slug,
+    PROJECTS_PATH
+  );
+
+  // 2. convert markdown content => HTML
+  const renderHTML = await renderMarkdown(articleMarkdownContent.content);
+
+  return {
+    props: {
+      frontMatter: articleMarkdownContent.frontMatter,
+      html: renderHTML,
+    },
+  };
+};
+
+export const getStaticPaths: GetStaticPaths<ArticleProps> = async () => {
+  const paths = readdirSync(PROJECTS_PATH)
+    .map((path) => path.replace(/\.mdx?$/, ""))
+    .map((slug) => ({ params: { slug } }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export default Project;

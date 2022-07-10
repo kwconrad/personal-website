@@ -33,7 +33,7 @@ export default function Navbar() {
     if (!!isOpen) {
       controls.start((i) => ({
         opacity: 1,
-        transition: { delay: i * 0.3 },
+        transition: { delay: i * 0.15 },
       }));
     } else {
       controls.start(() => ({
@@ -48,7 +48,7 @@ export default function Navbar() {
       ref={ref}
       className="mx-auto max-w-4xl w-full sm:flex sm:justify-between"
     >
-      <div className="px-4 md:px-6 lg:px-8 flex items-center justify-between">
+      <div className="flex items-center justify-between">
         <Logo></Logo>
         <div className="sm:hidden">
           <button onClick={handleToggleNavbar}>
@@ -58,23 +58,23 @@ export default function Navbar() {
       </div>
       <nav
         className={clsx(
-          "py-6 px-4 absolute top-32 sm:top-0 bottom-0 left-0 right-0 sm:relative sm:flex flex-col sm:flex-row gap-3 z-50 bg-gray-1200",
+          "py-6 absolute top-32 sm:top-0 bottom-0 left-0 right-0 sm:relative sm:flex flex-col sm:flex-row gap-3 z-50 bg-gray-1100",
           {
             block: isOpen,
             hidden: !isOpen,
           }
         )}
       >
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <div className="flex flex-col sm:flex-row gap-5 sm:gap-4">
           <motion.button
             custom={0}
             initial={{ opacity: width < 640 ? 0 : 1 }}
             animate={controls}
             type="button"
             onClick={() => handleNavigateToRoute("home")}
-            className="py-1 px-2 flex items-center gap-2 hover:bg-purple-300/30 rounded-lg"
+            className="flex items-center gap-2 group"
           >
-            <div className="w-3 h-3 rounded-full bg-purple-600"></div>
+            <div className="w-3 h-3 rounded-full bg-purple-600 transform scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-150 ease-in-out"></div>
             <span className="text-4xl sm:text-base font-bold text-purple-200">
               Home
             </span>
@@ -85,7 +85,7 @@ export default function Navbar() {
             animate={controls}
             type="button"
             href="#"
-            className="py-1 px-2 flex items-center gap-2 hover:bg-red-300/30 rounded-lg"
+            className="flex items-center gap-2 hover:bg-red-300/30 rounded-lg"
           >
             <div className="w-3 h-3 rounded-full bg-red-600"></div>
             <span className="text-4xl sm:text-base font-bold text-red-200">
@@ -98,7 +98,7 @@ export default function Navbar() {
             animate={controls}
             type="button"
             href="#"
-            className="py-1 px-2 flex items-center gap-2 hover:bg-orange-300/30 rounded-lg"
+            className="flex items-center gap-2 hover:bg-orange-300/30 rounded-lg"
           >
             <div className="w-3 h-3 rounded-full bg-orange-600"></div>
             <span className="text-4xl sm:text-base font-bold text-orange-200">
@@ -111,9 +111,9 @@ export default function Navbar() {
             animate={controls}
             type="button"
             onClick={() => handleNavigateToRoute("contact")}
-            className="py-1 px-2 flex items-center gap-2 hover:bg-green-300/30 rounded-lg"
+            className="flex items-center gap-2 group"
           >
-            <div className="w-3 h-3 rounded-full bg-green-600"></div>
+            <div className="w-3 h-3 rounded-full bg-green-600 transform scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-150 ease-in-out"></div>
             <span className="text-4xl sm:text-base font-bold text-green-200">
               Contact
             </span>

@@ -7,7 +7,7 @@ interface Props {
 
 export default function PrimaryLayout(props: Props) {
   return (
-    <div className="w-full h-full flex flex-col bg-gray-1200">
+    <div className="w-full min-h-full flex flex-col bg-gray-1100">
       <Banner
         onClick={() =>
           window.open("https://www.linkedin.com/in/kylewconrad/", "_blank")
@@ -17,11 +17,13 @@ export default function PrimaryLayout(props: Props) {
           🎊 Currently available for hire - Reach out to me!
         </span>
       </Banner>
-      <Header>
-        <Navbar></Navbar>
-      </Header>
-      {props.children}
-      <Footer></Footer>
+      <div className="min-h-full flex-1 px-4 flex flex-col items-center">
+        <Header>
+          <Navbar></Navbar>
+        </Header>
+        <div className="w-full flex-1">{props.children}</div>
+        <Footer></Footer>
+      </div>
     </div>
   );
 }

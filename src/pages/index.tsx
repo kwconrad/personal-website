@@ -9,17 +9,19 @@ const Home = () => {
         <title>Kyle Conrad - UX Engineer</title>
       </Head>
       <div className="mx-auto max-w-4xl">
-        <div className="px-4 md:px-6 lg:px-8 pt-6">
+        <div className="pt-6">
           <div className="pb-16 flex flex-col gap-6">
             <div className="flex flex-col gap-3">
               <h1 className="text-4xl md:text-5xl font-bold text-white">
-                I craft product experiences
+                Just a dude, building awesome products with great people.
               </h1>
               <p className="text-white">
-                Finding creative solutions to tricky problems has always been my
-                joy in life. I try to bring that joy and feeling of fun into
-                every problem I solve, for the organizations and individuals
-                that I work with.
+                Hi, I&apos;m Kyle. Finding creative solutions to tricky problems
+                has always been one of the biggest sources of fun for me.{" "}
+                <code className="p-1 rounded-lg bg-gray-800 font-mono">
+                  Code
+                </code>{" "}
+                is my medium for creativity and bringing products to life.
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-4">

@@ -9,7 +9,7 @@ const Home = () => {
         <title>Kyle Conrad - UX Engineer</title>
       </Head>
       <div className="mx-auto max-w-4xl">
-        <div className="px-4 md:px-6 lg:px-8 pt-6">
+        <div className="pt-6">
           <div className="pb-16 flex flex-col gap-6">
             <div className="flex flex-col gap-3">
               <h1 className="text-4xl md:text-5xl font-bold text-white">

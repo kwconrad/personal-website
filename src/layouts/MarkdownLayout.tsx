@@ -3,6 +3,9 @@ import Image, { ImageProps } from "next/image";
 import React from "react";
 import { PrimaryLayout } from "layouts";
 import Head from "next/head";
+import Link from "next/link";
+import { routes } from "lib";
+import { IconArrowLeft } from "icons";
 
 const ResponsiveImage = (
   props: any // Figure out the props
@@ -48,6 +51,16 @@ export default function MarkdownLayout(props: Props) {
       </Head>
       <PrimaryLayout>
         <main className="mx-auto max-w-4xl w-full">
+          <div className="py-4">
+            <Link href={routes.projects}>
+              <button className="flex items-center gap-2 group">
+                <IconArrowLeft className="w-5 h-5 text-white"></IconArrowLeft>
+                <span className="text-base text-white group-hover:underline">
+                  Go back
+                </span>
+              </button>
+            </Link>
+          </div>
           <h1 className="text-3xl md:text-5xl font-bold text-white">
             {meta.title}
           </h1>

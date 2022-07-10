@@ -9,7 +9,7 @@ import { routes } from "lib";
 
 export default function Navbar() {
   const router = useRouter();
-  const handleNavigateToRoute = (path: "home" | "contact") => {
+  const handleNavigateToRoute = (path: "home" | "contact" | "projects") => {
     setIsOpen(false);
     router.push(routes[path]);
   };
@@ -25,6 +25,15 @@ export default function Navbar() {
       setIsOpen(false);
     }
   }, [width]);
+
+  useEffect(() => {
+    if (window?.document) {
+      let body = window.document.querySelector("body");
+      if (!body) return;
+
+      body.style.overflow = isOpen ? "hidden" : "auto";
+    }
+  }, [isOpen]);
 
   const controls = useAnimation();
   useEffect(() => {
@@ -74,39 +83,26 @@ export default function Navbar() {
             onClick={() => handleNavigateToRoute("home")}
             className="flex items-center gap-2 group"
           >
-            <div className="w-3 h-3 rounded-full bg-purple-600 transform scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-150 ease-in-out"></div>
-            <span className="text-4xl sm:text-base font-bold text-purple-200">
+            <div className="w-3 h-3 rounded-full bg-red-600 transform scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-150 ease-in-out"></div>
+            <span className="text-4xl sm:text-base font-bold text-red-200">
               Home
             </span>
           </motion.button>
-          {/* <motion.button
+          <motion.button
             custom={1}
             initial={{ opacity: width < 640 ? 0 : 1 }}
             animate={controls}
             type="button"
-            href="#"
-            className="flex items-center gap-2 hover:bg-red-300/30 rounded-lg"
+            onClick={() => handleNavigateToRoute("projects")}
+            className="flex items-center gap-2 group"
           >
-            <div className="w-3 h-3 rounded-full bg-red-600"></div>
-            <span className="text-4xl sm:text-base font-bold text-red-200">
+            <div className="w-3 h-3 rounded-full bg-yellow-600 transform scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-150 ease-in-out"></div>
+            <span className="text-4xl sm:text-base font-bold text-yellow-200">
               Projects
             </span>
           </motion.button>
           <motion.button
             custom={2}
-            initial={{ opacity: width < 640 ? 0 : 1 }}
-            animate={controls}
-            type="button"
-            href="#"
-            className="flex items-center gap-2 hover:bg-orange-300/30 rounded-lg"
-          >
-            <div className="w-3 h-3 rounded-full bg-orange-600"></div>
-            <span className="text-4xl sm:text-base font-bold text-orange-200">
-              My story
-            </span>
-          </motion.button> */}
-          <motion.button
-            custom={3}
             initial={{ opacity: width < 640 ? 0 : 1 }}
             animate={controls}
             type="button"

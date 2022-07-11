@@ -9,7 +9,7 @@ const Home = () => {
         <title>Kyle Conrad - UX Engineer</title>
       </Head>
       <div className="mx-auto max-w-4xl">
-        <div className="px-4 md:px-6 lg:px-8 pt-6">
+        <div className="pt-6">
           <div className="pb-16 flex flex-col gap-6">
             <div className="flex flex-col gap-3">
               <h1 className="text-4xl md:text-5xl font-bold text-white">
@@ -31,7 +31,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                See my portfolio
+                See my Dribbble portfolio
               </a>
               <a
                 className="w-full md:w-auto px-6 py-3 bg-gray-1000 hover:bg-gray-800 text-sm text-white text-center font-bold rounded-full transition-colors duration-150 ease-in-out"

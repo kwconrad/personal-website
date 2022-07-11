@@ -9,11 +9,11 @@ const Home = () => {
         <title>Kyle Conrad - UX Engineer</title>
       </Head>
       <div className="mx-auto max-w-4xl">
-        <div className="pt-6">
+        <div className="px-4 md:px-6 lg:px-8 pt-6">
           <div className="pb-16 flex flex-col gap-6">
             <div className="flex flex-col gap-3">
               <h1 className="text-4xl md:text-5xl font-bold text-white">
-                Just a dude, building awesome products with great people.
+                Just a guy building awesome products with great people.
               </h1>
               <p className="text-white">
                 Hi, I&apos;m Kyle. Finding creative solutions to tricky problems
@@ -21,7 +21,7 @@ const Home = () => {
                 <code className="p-1 rounded-lg bg-gray-800 font-mono">
                   Code
                 </code>{" "}
-                is my medium for creativity and bringing products to life.
+                is my creative medium for bringing products to life.
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-4">

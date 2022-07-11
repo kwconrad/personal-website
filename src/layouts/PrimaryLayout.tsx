@@ -14,7 +14,7 @@ export default function PrimaryLayout(props: Props) {
         }
       >
         <span className="text-sm text-white font-bold">
-          🎊 Currently available for hire - Reach out to me!
+          🎊 Currently available for hire - Reach out to me on LinkedIn!
         </span>
       </Banner>
       <div className="min-h-full flex-1 px-4 flex flex-col items-center">

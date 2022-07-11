@@ -13,7 +13,7 @@ const Home = () => {
           <div className="pb-16 flex flex-col gap-6">
             <div className="flex flex-col gap-3">
               <h1 className="text-4xl md:text-5xl font-bold text-white">
-                Just a dude, building awesome products with great people.
+                Just a guy building awesome products with great people.
               </h1>
               <p className="text-white">
                 Hi, I&apos;m Kyle. Finding creative solutions to tricky problems
@@ -21,7 +21,7 @@ const Home = () => {
                 <code className="p-1 rounded-lg bg-gray-800 font-mono">
                   Code
                 </code>{" "}
-                is my medium for creativity and bringing products to life.
+                is my creative medium for bringing products to life.
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-4">
@@ -31,7 +31,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                See my portfolio
+                See my Dribbble portfolio
               </a>
               <a
                 className="w-full md:w-auto px-6 py-3 bg-gray-1000 hover:bg-gray-800 text-sm text-white text-center font-bold rounded-full transition-colors duration-150 ease-in-out"

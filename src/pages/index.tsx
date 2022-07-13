@@ -16,23 +16,16 @@ const Home = () => {
                 Just a guy building awesome products with great people.
               </h1>
               <p className="text-white">
-                Hi, I&apos;m Kyle. Finding creative solutions to tricky problems
-                has always been one of the biggest sources of fun for me.{" "}
+                Hi, I&apos;m Kyle. Finding creative solutions to user-centered
+                problems is one of the biggest sources of fun for me.{" "}
                 <code className="p-1 rounded-lg bg-gray-800 font-mono">
                   Code
                 </code>{" "}
-                is my creative medium for bringing products to life.
+                is my medium for creativity and bringing design solutions to
+                life.
               </p>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-4">
-              <a
-                className="w-full md:w-auto px-6 py-3 bg-white hover:bg-gray-400 text-sm text-gray-1200 text-center font-bold rounded-full transition-colors duration-150 ease-in-out"
-                href="https://dribbble.com/easternsun"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                See my Dribbble portfolio
-              </a>
               <a
                 className="w-full md:w-auto px-6 py-3 bg-gray-1000 hover:bg-gray-800 text-sm text-white text-center font-bold rounded-full transition-colors duration-150 ease-in-out"
                 href="/cv-2022.pdf"

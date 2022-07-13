@@ -14,7 +14,17 @@ import { getParsedFileContentBySlug, renderMarkdown } from "lib/markdown";
 
 const ResponsiveImage = (
   props: any // Figure out the props
-) => <Image alt={props.alt} layout="responsive" {...props} />;
+) => (
+  <div className="w-full h-auto aspect-[4/3] relative rounded-lg overflow-hidden">
+    <Image
+      alt={props.alt}
+      layout="fill"
+      objectFit="cover"
+      objectPosition="center"
+      {...props}
+    />
+  </div>
+);
 
 const components = {
   img: ResponsiveImage,

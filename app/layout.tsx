@@ -12,12 +12,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="w-full h-full m-0 p-0">
+    <html lang="en">
       <head>
         <title>Kyle Conrad - Design Technologist</title>
         <link rel="stylesheet" href="https://use.typekit.net/nxc3ejx.css" />
       </head>
-      <body className="w-full h-full flex flex-col">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

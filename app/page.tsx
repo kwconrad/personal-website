@@ -1,113 +1,56 @@
-import Image from 'next/image'
-
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="h-full w-full bg-yellow">
+      <div className="px-4 mx-auto w-full h-20 max-w-3xl">
+        <div className="h-full w-full flex items-center justify-between">
+          <span className="font-bold text-black font-bold font-aktiv-grotesk">
+            Kyle Conrad
+          </span>
+          <button className="h-10 px-4 bg-black border-2 border-solid border-black hover:border-dashed hover:text-black hover:bg-yellow transition duration-250 transition-colors text-yellow text-base font-aktiv-grotesk rounded-full">
+            Let&apos;s talk
+          </button>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="px-4 mx-auto max-w-3xl flex flex-col pt-16 gap-6 items-center">
+        <h1 className="text-black text-center text-6xl sm:text-7xl font-mencken-std-head-compress font-lightest uppercase">
+          Design technologist with a passion for experimentation and growth
+        </h1>
+        <h2 className="text-black text-base text-center text-lg font-aktiv-grotesk font-lightest">
+          Hi, I&apos;m Kyle, a multi-media digital product creator based in
+          California. Reach out to me if you want to work with someone who is
+          just as comfortable designing UIs in Figma as coding frontends in
+          React and Next.js.
+        </h2>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+      <div className="px-4 mx-auto max-w-3xl flex flex-col pt-10 pb-16">
+        <div className="flex flex-col sm:flex-row items-center w-full gap-4 sm:gap-2">
+          <span className="shrink-0 font-bold text-black font-bold font-aktiv-grotesk">
+            Lets build your next
+            <span className="inline-block px-2">
+              <svg
+                className="w-12 h-12 text-black inline-block"
+                width="218"
+                height="203"
+                viewBox="0 0 218 203"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M100.5 64.5319V0H114.5V70.9337L146.209 5.93103L158.791 12.069L132.134 66.7164L185.8 13.0503L195.7 22.9497L140.486 78.1632L199.544 50.6546L205.456 63.3454L139.107 94.25H218V108.25H144.528L205.055 131.983L199.945 145.017L136.154 120.004L175.95 159.8L166.05 169.7L127.956 131.605L146.446 175.27L133.554 180.73L114.5 135.733V202.5H100.5V143.73L88.1299 180.246L74.8701 175.754L91.2512 127.398L48.9497 169.7L39.0503 159.8L76.2731 122.577L25.3097 144.911L19.6903 132.089L74.0872 108.25H0V94.25H75.8932L9.54437 63.3454L15.4556 50.6546L74.5137 78.1632L27.5503 31.1997L37.4497 21.3003L88.562 72.4126L64.491 11.5754L77.509 6.42461L100.5 64.5319Z"
+                  fill="currentColor"
+                />
+              </svg>
             </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+            (big thing)
+          </span>
+          <div className="hidden sm:flex h-px w-full border border-dashed border-black"></div>
+          <button className="shrink-0 h-10 w-full sm:w-auto px-4 bg-black border-2 border-solid border-black hover:border-dashed hover:text-black hover:bg-yellow transition duration-250 transition-colors text-yellow text-base font-aktiv-grotesk rounded-full">
+            Send me a message
+          </button>
+        </div>
       </div>
     </main>
-  )
+  );
 }

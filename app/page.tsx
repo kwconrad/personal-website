@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="h-full min-h-full w-full bg-yellow">
+    <main className="h-full min-h-screen w-full bg-yellow">
       <div className="px-4 mx-auto w-full h-20 max-w-3xl">
         <div className="h-full w-full flex items-center justify-between">
           <span className="font-bold text-black font-bold font-aktiv-grotesk">

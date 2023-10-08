@@ -1,21 +1,32 @@
-export default function Home() {
+import { ContactFormModal } from "@/components";
+import Link from "next/link";
+
+type HomeProps = {
+  searchParams: Record<string, string> | null | undefined;
+};
+export default function Home({ searchParams }: HomeProps) {
+  const showModal = searchParams?.modal;
+
   return (
     <main className="h-full min-h-screen w-full bg-yellow">
       <div className="px-4 mx-auto w-full h-20 max-w-3xl">
         <div className="h-full w-full flex items-center justify-between">
-          <span className="font-bold text-black font-bold font-aktiv-grotesk">
+          <span className="text-black font-bold font-aktiv-grotesk">
             Kyle Conrad
           </span>
-          <button className="h-10 px-4 bg-black border-2 border-solid border-black hover:border-dashed hover:text-black hover:bg-yellow transition duration-250 transition-colors text-yellow text-base font-aktiv-grotesk rounded-full">
-            Let&apos;s talk
-          </button>
+          <Link
+            href="/?modal=true"
+            className="h-10 flex items-center px-4 bg-black border-2 border-solid border-black hover:border-dashed hover:text-black hover:bg-yellow duration-250 transition-colors text-yellow text-base font-aktiv-grotesk rounded-full"
+          >
+            Let&apos;s talk!
+          </Link>
         </div>
       </div>
       <div className="px-4 mx-auto max-w-3xl flex flex-col pt-16 gap-6 items-center">
         <h1 className="text-black text-center text-6xl sm:text-7xl font-mencken-std-head-compress font-lightest uppercase">
           Design technologist with a passion for experimentation and growth
         </h1>
-        <h2 className="text-black text-base text-center text-lg font-aktiv-grotesk font-lightest">
+        <h2 className="text-black text-base text-center font-aktiv-grotesk font-lightest">
           Hi, I&apos;m Kyle, a multi-media digital product creator based in
           California. Reach out to me if you want to work with someone who is
           just as comfortable designing UIs in Figma as coding frontends in
@@ -24,7 +35,7 @@ export default function Home() {
       </div>
       <div className="px-4 mx-auto max-w-3xl flex flex-col pt-10 pb-16">
         <div className="flex flex-col sm:flex-row items-center w-full gap-4 sm:gap-2">
-          <span className="shrink-0 font-bold text-black font-bold font-aktiv-grotesk">
+          <span className="shrink-0 font-bold text-black font-aktiv-grotesk">
             Lets build the next
             <span className="inline-block px-2">
               <svg
@@ -46,11 +57,15 @@ export default function Home() {
             (big thing)
           </span>
           <div className="hidden sm:flex h-px w-full border border-dashed border-black"></div>
-          <button className="shrink-0 h-10 w-full sm:w-auto px-4 bg-black border-2 border-solid border-black hover:border-dashed hover:text-black hover:bg-yellow transition duration-250 transition-colors text-yellow text-base font-aktiv-grotesk rounded-full">
+          <Link
+            href="/?modal=true"
+            className="shrink-0 flex items-center justify-center h-10 w-full sm:w-auto px-4 bg-black border-2 border-solid border-black hover:border-dashed hover:text-black hover:bg-yellow transition duration-250 transition-colors text-yellow text-base font-aktiv-grotesk rounded-full"
+          >
             Send me a message
-          </button>
+          </Link>
         </div>
       </div>
+      {showModal && <ContactFormModal></ContactFormModal>}
     </main>
   );
 }

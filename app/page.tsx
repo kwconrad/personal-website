@@ -25,10 +25,10 @@ export default function Home() {
       <div className="px-4 mx-auto max-w-3xl flex flex-col pt-10 pb-16">
         <div className="flex flex-col sm:flex-row items-center w-full gap-4 sm:gap-2">
           <span className="shrink-0 font-bold text-black font-bold font-aktiv-grotesk">
-            Lets build your next
+            Lets build the next
             <span className="inline-block px-2">
               <svg
-                className="w-12 h-12 text-black inline-block"
+                className="w-14 h-14 text-black inline-block"
                 width="218"
                 height="203"
                 viewBox="0 0 218 203"

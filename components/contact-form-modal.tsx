@@ -56,8 +56,8 @@ export default function ContactFormModal() {
                 Lets talk!
               </h2>
               <p className="mt-2 mb-6 text-base text-cream/60 font-aktiv-grotesk">
-                React out to me! Lets work together or workshop something. I
-                always welcome conversations on design and product.
+                Have an idea for a product? Want to have a virtual coffee?
+                Don&apos;t hesitate to reach out!
               </p>
             </div>
             <Link

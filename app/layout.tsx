@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Kyle Conrad - Design Technologist</title>
+        <title>Kyle Conrad - UX Engineer</title>
         <link rel="stylesheet" href="https://use.typekit.net/nxc3ejx.css" />
       </head>
       <body>{children}</body>

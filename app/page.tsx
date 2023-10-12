@@ -24,13 +24,13 @@ export default function Home({ searchParams }: HomeProps) {
       </div>
       <div className="px-4 mx-auto max-w-3xl flex flex-col pt-16 gap-6 items-center">
         <h1 className="text-black text-center text-6xl sm:text-7xl font-mencken-std-head-compress font-lightest uppercase">
-          Design technologist with a passion for experimentation and growth
+          UX Engineer with a passion for experimentation and growth
         </h1>
         <h2 className="text-black text-base text-center font-aktiv-grotesk font-lightest">
-          Hi, I&apos;m Kyle, a multi-media digital product creator based in
-          California. Reach out to me if you want to work with someone who is
-          just as comfortable designing UIs in Figma as coding frontends in
-          React and Next.js.
+          Hi, I&apos;m Kyle, a digital product creator based in California.
+          Reach out to me if you want to work with someone who is just as
+          comfortable designing UIs in Figma as coding frontends in React and
+          Next.js.
         </h2>
       </div>
       <div className="px-4 mx-auto max-w-3xl flex flex-col pt-10 pb-16">

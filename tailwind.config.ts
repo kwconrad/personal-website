@@ -7,8 +7,12 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      "aktiv-grotesk": ["aktiv-grotesk", "sans-serif"],
-      "mencken-std-head-compress": ["mencken-std-head-compress", "sans-serif"],
+      "tablet-gothic-semi-condensed": [
+        "tablet-gothic-semi-condensed",
+        "sans-serif",
+      ],
+      "neue-haas-grotesk-display": ["neue-haas-grotesk-display", "sans-serif"],
+      "neue-haas-unica": ["neue-haas-unica", "sans-serif"],
     },
     colors: {
       cream: "#F6FBFD",

@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main className="h-full min-h-screen w-full bg-black">
-      <div className="px-4 mx-auto w-full h-20 max-w-5xl">
+      <div className="px-4 mx-auto w-full h-20 max-w-4xl">
         <div className="h-20 w-full flex items-center">
           <div className="flex flex-col">
             <span className="text-cream uppercase text-sm font-semibold font-work-sans leading-tight tracking-normal">

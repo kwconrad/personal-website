@@ -58,7 +58,14 @@ export default function Home() {
         <h2 className="text-cream text-xl font-extralight font-public-sans tracking-tight">
           👋 Hey, I&apos;m Kyle. I&apos;m passionate about crafting seamless
           user experiences that are both visually stunning and highly
-          functional, ensuring users can effortlessly achieve their goals
+          functional, ensuring users can effortlessly achieve their goals.
+          Looking for help with your next project or feature?{" "}
+          <a
+            className="font-semibold underline"
+            href="mailto:kyle@kyleconrad.me"
+          >
+            Reach out!
+          </a>
         </h2>
       </div>
     </main>

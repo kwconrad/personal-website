@@ -1,21 +1,27 @@
 import "./globals.css";
 import type { Metadata } from "next";
 
-import { Work_Sans, Archivo } from "next/font/google";
+import { Public_Sans, Archivo, Roboto_Mono } from "next/font/google";
 
 const ArchivoFont = Archivo({
   subsets: ["latin"],
   variable: "--font-archivo",
 });
 
-const WorkSansFont = Work_Sans({
+const PublicSansFont = Public_Sans({
   subsets: ["latin"],
-  variable: "--font-work-sans",
+  variable: "--font-public-sans",
+});
+
+const RobotoMonoFont = Roboto_Mono({
+  subsets: ["latin"],
+  variable: "--font-roboto-mono",
 });
 
 export const metadata: Metadata = {
-  title: "Kyle Conrad - UX Engineer",
-  description: "",
+  title: "Kyle Conrad - Sr. Frontend Engineer",
+  description:
+    "Hey, I'm Kyle. I'm passionate about crafting seamless user experiences that are both visually stunning and highly functional, ensuring users can effortlessly achieve their goals",
 };
 
 export default function RootLayout({
@@ -26,10 +32,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Kyle Conrad - Product Engineer</title>
-        <link rel="stylesheet" href="https://use.typekit.net/kiy6oqr.css" />
+        <title>Kyle Conrad - Sr. Frontend Engineer</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="stylesheet" href="https://use.typekit.net/kib5awe.css" />
       </head>
-      <body className={`${WorkSansFont.variable} ${ArchivoFont.variable}`}>
+      <body
+        className={`${PublicSansFont.variable} ${ArchivoFont.variable} ${RobotoMonoFont.variable}`}
+      >
         {children}
       </body>
     </html>

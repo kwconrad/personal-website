@@ -7,15 +7,23 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      "work-sans": ["var(--font-work-sans)"],
+      "public-sans": ["var(--font-public-sans)"],
+      "roboto-mono": ["var(--font-roboto-mono)"],
       archivo: ["var(--font-archivo)"],
     },
     colors: {
-      cream: "#F6FBFD",
       yellow: "#e8c04a",
-      pink: "#DFA1A8",
+      cream: "#F6EEE3",
       black: "#221F20",
-      blue: "#313EC3",
+      green: "#8BE4A2",
+    },
+    extend: {
+      borderRadius: {
+        4: "4px",
+      },
+      fontSize: {
+        xs: "10px",
+      },
     },
   },
   plugins: [],

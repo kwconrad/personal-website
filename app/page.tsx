@@ -30,7 +30,7 @@ export default function Home() {
             <a
               href={GITHUB_LINK}
               target="_blank"
-              className="px-1.5 py-1 flex-grow-0 bg-cream/20 hover:bg-cream/30 hover:border-cream border border-cream/60 rounded-4 flex items-center gap-1"
+              className="hidden md:flex px-1.5 py-1 flex-grow-0 bg-cream/20 hover:bg-cream/30 hover:border-cream border border-cream/60 rounded-4 items-center gap-1"
             >
               <GithubLogo className="w-4 h-4 text-cream"></GithubLogo>
               <span className="text-xs uppercase font-medium font-roboto-mono text-cream">
@@ -40,7 +40,7 @@ export default function Home() {
             <a
               href={LINKEDIN_LINK}
               target="_blank"
-              className="px-1.5 py-1 flex-grow-0 bg-cream/20 hover:bg-cream/30 hover:border-cream border border-cream/60 rounded-4 flex items-center gap-1"
+              className="hidden md:flex px-1.5 py-1 flex-grow-0 bg-cream/20 hover:bg-cream/30 hover:border-cream border border-cream/60 rounded-4 items-center gap-1"
             >
               <LinkedInLogo className="w-4 h-4 text-cream"></LinkedInLogo>
               <span className="text-xs uppercase font-medium font-roboto-mono text-cream">
@@ -50,8 +50,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="select-none touch-none px-4 mx-auto max-w-4xl h-full flex flex-col justify-center pt-16 gap-6">
-        <h1 className="text-cream text-6xl font-bold font-archivo leading-[1.125] tracking-tight">
+      <div className="select-none touch-none px-4 mx-auto max-w-4xl h-full flex flex-col justify-center pt-16 gap-4 md:gap-6">
+        <h1 className="text-cream text-4xl md:text-6xl font-bold font-archivo leading-[1.125] tracking-tight">
           Experienced frontend engineer, crafting market-ready products at
           record speed
         </h1>
@@ -67,6 +67,28 @@ export default function Home() {
             Reach out!
           </a>
         </h2>
+        <div className="flex md:hidden gap-4 items-center">
+          <a
+            href={GITHUB_LINK}
+            target="_blank"
+            className="px-3 py-2 flex-grow-0 bg-cream/20 hover:bg-cream/30 hover:border-cream border border-cream/60 rounded-4 flex items-center gap-1"
+          >
+            <GithubLogo className="w-4 h-4 text-cream"></GithubLogo>
+            <span className="text-sm uppercase font-medium font-roboto-mono text-cream">
+              Github
+            </span>
+          </a>
+          <a
+            href={LINKEDIN_LINK}
+            target="_blank"
+            className="px-3 py-2 flex-grow-0 bg-cream/20 hover:bg-cream/30 hover:border-cream border border-cream/60 rounded-4 flex items-center gap-1"
+          >
+            <LinkedInLogo className="w-4 h-4 text-cream"></LinkedInLogo>
+            <span className="text-sm uppercase font-medium font-roboto-mono text-cream">
+              LinkedIn
+            </span>
+          </a>
+        </div>
       </div>
     </main>
   );

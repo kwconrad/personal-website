@@ -7,12 +7,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      "tablet-gothic-semi-condensed": [
-        "tablet-gothic-semi-condensed",
-        "sans-serif",
-      ],
-      "neue-haas-grotesk-display": ["neue-haas-grotesk-display", "sans-serif"],
-      "neue-haas-unica": ["neue-haas-unica", "sans-serif"],
+      "work-sans": ["var(--font-work-sans)"],
+      archivo: ["var(--font-archivo)"],
     },
     colors: {
       cream: "#F6FBFD",

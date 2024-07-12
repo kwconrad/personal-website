@@ -52,14 +52,13 @@ export default function Home() {
       </div>
       <div className="select-none touch-none px-4 mx-auto max-w-4xl h-full flex flex-col justify-center pt-16 gap-4 md:gap-6">
         <h1 className="text-cream text-4xl md:text-6xl font-bold font-archivo leading-[1.125] tracking-tight">
-          Experienced frontend engineer, crafting market-ready products at
-          record speed
+          Experienced frontend engineer, focused on creating exceptional user
+          experiences
         </h1>
         <h2 className="text-cream text-xl font-extralight font-public-sans tracking-tight">
-          👋 Hey, I&apos;m Kyle. I&apos;m passionate about crafting seamless
-          user experiences that are both visually stunning and highly
-          functional, ensuring users can effortlessly achieve their goals.
-          Looking for help with your next project or feature?{" "}
+          👋 Hey, I&apos;m Kyle. I&apos;m passionate about crafting user
+          experiences that are both visually stunning and highly functional.
+          Looking for help with your next project?{" "}
           <a
             className="font-semibold underline"
             href="mailto:kyle@kyleconrad.me"

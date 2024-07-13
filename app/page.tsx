@@ -53,12 +53,13 @@ export default function Home() {
       <div className="select-none touch-none px-4 max-w-4xl flex flex-col justify-between flex-grow items-center pt-16">
         <div className="flex flex-col gap-4 md:gap-6">
           <h1 className="text-cream text-4xl md:text-6xl font-bold font-archivo leading-[1.125] tracking-tight">
-            Experienced frontend engineer, focused on creating exceptional user
+            Experienced frontend engineer, focused on crafting exceptional user
             experiences
           </h1>
           <h2 className="text-cream text-xl font-extralight font-public-sans tracking-tight">
-            👋 Hey, I&apos;m Kyle. I&apos;m passionate about crafting user
-            experiences that are both visually stunning and highly functional.
+            👋 Hey, I&apos;m Kyle. I&apos;m passionate about design systems,
+            systems thinking, and AI. I enjoy refining experiences and making
+            products which are both visually stunning and highly functional.
             Looking for help with your next project?{" "}
             <a
               className="font-semibold underline"

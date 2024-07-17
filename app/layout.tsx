@@ -19,7 +19,7 @@ const RobotoMonoFont = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kyle Conrad - Sr. Frontend Engineer",
+  title: "Kyle Conrad - Design Engineer",
   description:
     "Hey, I'm Kyle. I'm passionate about crafting seamless user experiences that are both visually stunning and highly functional, ensuring users can effortlessly achieve their goals",
 };
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Kyle Conrad - Sr. Frontend Engineer</title>
+        <title>Kyle Conrad - Design Engineer</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="stylesheet" href="https://use.typekit.net/kib5awe.css" />
       </head>

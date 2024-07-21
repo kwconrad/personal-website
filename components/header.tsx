@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <div className="h-20 w-full flex items-center justify-between">
+    <div className="px-4 h-20 w-full flex items-center justify-between">
       <div className="flex gap-2 items-center">
         <div className="w-10 h-10 rounded-full bg-yellow"></div>
         <div className="touch-none select-none flex flex-col">

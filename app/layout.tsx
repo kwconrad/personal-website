@@ -1,3 +1,4 @@
+import { Footer, Header } from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -39,7 +40,13 @@ export default function RootLayout({
       <body
         className={`${PublicSansFont.variable} ${ArchivoFont.variable} ${RobotoMonoFont.variable}`}
       >
-        {children}
+        <main className="w-full h-full bg-black flex justify-center">
+          <div className="px-4 h-full w-full max-w-4xl flex flex-col">
+            <Header />
+            <div className="flex flex-grow">{children}</div>
+            <Footer />
+          </div>
+        </main>
       </body>
     </html>
   );

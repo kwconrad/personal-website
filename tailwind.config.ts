@@ -13,8 +13,8 @@ const config: Config = {
     },
     colors: {
       yellow: "#e8c04a",
-      cream: "#F6EEE3",
-      black: "#221F20",
+      cream: "#fafafa",
+      black: "#1A1B1F",
       green: "#8BE4A2",
     },
     extend: {

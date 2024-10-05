@@ -1,23 +1,6 @@
-import { Footer, Header } from "@/components";
-import "./globals.css";
 import type { Metadata } from "next";
-
-import { Public_Sans, Archivo, Roboto_Mono } from "next/font/google";
-
-const ArchivoFont = Archivo({
-  subsets: ["latin"],
-  variable: "--font-archivo",
-});
-
-const PublicSansFont = Public_Sans({
-  subsets: ["latin"],
-  variable: "--font-public-sans",
-});
-
-const RobotoMonoFont = Roboto_Mono({
-  subsets: ["latin"],
-  variable: "--font-roboto-mono",
-});
+import { Footer, Header } from "@/components";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Kyle Conrad - Design Engineer",
@@ -37,16 +20,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="stylesheet" href="https://use.typekit.net/kib5awe.css" />
       </head>
-      <body
-        className={`${PublicSansFont.variable} ${ArchivoFont.variable} ${RobotoMonoFont.variable}`}
-      >
-        <main className="w-full h-full bg-black flex justify-center">
-          <div className="px-4 h-full w-full max-w-4xl flex flex-col">
-            <Header />
-            <div className="flex flex-grow">{children}</div>
-            <Footer />
-          </div>
-        </main>
+      <body className="flex h-full min-h-screen w-full justify-center overflow-x-hidden overflow-y-scroll bg-neutral-950">
+        <div className="flex h-full w-full max-w-4xl flex-col px-4">
+          <Header />
+          <div className="flex min-h-[900px] flex-grow">{children}</div>
+          <Footer />
+        </div>
       </body>
     </html>
   );

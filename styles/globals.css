@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  /* shadows */
+  --shadow-border-inner-light: 0px 1px 0px 0px hsla(0, 0%, 100%, 0.08) inset;
+  --shadow-border-inner-dark: 0px 0px 0px 1px hsla(0, 0%, 0%, 0.02) inset;
+  --shadow-card-dark: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+  /* colors */
+  --color-interface-red: #e54a30;
+  --color-interface-orange: #e98339;
+  --color-interface-yellow: #f1ca4a;
+  --color-interface-green: #6ecdb7;
+  --color-interface-blue: #57abf0;
+  --color-interface-indigo: #502eec;
+}
+
+/* Util */
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

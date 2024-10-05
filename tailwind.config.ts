@@ -6,23 +6,30 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily: {
-      "public-sans": ["var(--font-public-sans)"],
-      "roboto-mono": ["var(--font-roboto-mono)"],
-      archivo: ["var(--font-archivo)"],
-    },
-    colors: {
-      yellow: "#e8c04a",
-      cream: "#fafafa",
-      black: "#1A1B1F",
-      green: "#8BE4A2",
-    },
     extend: {
+      fontFamily: {
+        sans: ["neue-haas-grotesk-text", "sans-serif"],
+      },
+      colors: {
+        interface: {
+          red: "var(--color-interface-red)",
+          orange: "var(--color-interface-orange)",
+          yellow: "var(--color-interface-yellow)",
+          green: "var(--color-interface-green)",
+          blue: "var(--color-interface-blue)",
+          indigo: "var(--color-interface-indigo)",
+        },
+      },
       borderRadius: {
         4: "4px",
+        8: "8px",
       },
       fontSize: {
         xs: "10px",
+      },
+      boxShadow: {
+        "border-shadow":
+          "var(--shadow-border-inner-light), var(--shadow-border-inner-dark), var(--shadow-card-dark)",
       },
     },
   },

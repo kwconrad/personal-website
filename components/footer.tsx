@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="h-20 w-full flex justify-center items-center">
-      <span className="text-cream text-center md:text-left font-public-sans text-sm">
+    <footer className="flex h-20 w-full flex-shrink-0 items-center justify-center">
+      <span className="text-center text-sm text-white md:text-left">
         © {new Date().getFullYear()}, Kyle Conrad. Built with TypeScript,
         Next.js and TailwindCSS
       </span>

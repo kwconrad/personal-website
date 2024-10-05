@@ -4,8 +4,7 @@ import { CheckIcon } from "@heroicons/react/16/solid";
 import clsx from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { ChangeEvent, useState } from "react";
-import DatePicker from "react-datepicker";
-import { Select } from ".";
+import { DatePicker, Select } from ".";
 import { Option } from "@/types/ui";
 
 export default function EventCreationModal() {

@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className="flex h-full min-h-screen w-full justify-center overflow-x-hidden overflow-y-scroll bg-neutral-950">
         <div className="flex h-full w-full max-w-4xl flex-col px-4">
           <Header />
-          <div className="flex min-h-[900px] flex-grow">{children}</div>
+          <div className="flex flex-grow">{children}</div>
           <Footer />
         </div>
       </body>

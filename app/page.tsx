@@ -1,7 +1,6 @@
 "use client";
 
-import { EventCreationModal } from "@/components";
-import Me from "@/public/me.svg";
+import { EventCreationModal, TabTransition } from "@/components";
 
 export default function Home() {
   return (
@@ -13,12 +12,36 @@ export default function Home() {
           Prankster.
         </h1>
         <h2 className="text-xl text-neutral-300">
-          Mostly I upload explorations and experiments in interaction and
-          usability. If you want to reach out and connect, drop me a line{" "}
+          This is my repository of explorations and experiments in interaction
+          and usability. If you want to reach out and connect, drop me a line{" "}
           <a className="text-white underline" href="mailto:kyle@kyleconrad.me">
             here
           </a>
         </h2>
+      </section>
+      <section className="flex w-full flex-shrink-0 flex-col gap-12 md:flex-row">
+        <div className="flex flex-col gap-2">
+          <div className="flex w-full flex-col">
+            <span className="font-medium text-white">Tab Transition</span>
+            <span className="text-neutral-400">
+              Exploring blur transitions in tab navigation
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
+              headlessui
+            </div>
+            <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
+              tailwind
+            </div>
+            <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
+              framer-motion
+            </div>
+          </div>
+        </div>
+        <div className="flex aspect-square w-full flex-shrink-0 items-center justify-center border border-transparent bg-neutral-950 sm:border-neutral-800 md:w-2/3">
+          <TabTransition></TabTransition>
+        </div>
       </section>
       <section className="flex w-full flex-shrink-0 flex-col gap-12 md:flex-row">
         <div className="flex flex-col gap-2">
@@ -36,9 +59,9 @@ export default function Home() {
               interactions might feel.
             </span>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
-              radix
+              headlessui
             </div>
             <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
               tailwind

@@ -2,6 +2,8 @@
 import { ColorPicker, DateInput, TabTransition } from "@/components";
 
 export default function Home() {
+  const tagClassNames =
+    "rounded-md border border-neutral-600 bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100";
   return (
     <main className="flex h-full w-full flex-shrink-0 flex-col items-center gap-16 py-12 md:gap-32 md:py-20">
       {/* About me */}
@@ -19,23 +21,16 @@ export default function Home() {
         </h2>
       </section>
       <section className="flex w-full flex-shrink-0 flex-col gap-12 md:flex-row">
-        <div className="flex flex-col gap-2">
-          <div className="flex w-full flex-col">
-            <span className="font-medium text-white">Tab Transition</span>
+        <div className="flex flex-col gap-3">
+          <div className="flex w-full flex-col gap-1">
+            <span className="font-medium text-white">Date Input</span>
             <span className="text-neutral-400">
-              Exploring blur transitions in tab navigation
+              This is an exploration into some microinteractions in a date
+              input.
             </span>
           </div>
           <div className="flex flex-wrap gap-2">
-            <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
-              headlessui
-            </div>
-            <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
-              tailwind
-            </div>
-            <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
-              framer-motion
-            </div>
+            <div className={tagClassNames}>tailwind</div>
           </div>
         </div>
         <div className="flex aspect-square w-full flex-shrink-0 items-center justify-center border border-transparent bg-neutral-950 sm:border-neutral-800 md:w-2/3">
@@ -45,23 +40,17 @@ export default function Home() {
         </div>
       </section>
       <section className="flex w-full flex-shrink-0 flex-col gap-12 md:flex-row">
-        <div className="flex flex-col gap-2">
-          <div className="flex w-full flex-col">
+        <div className="flex flex-col gap-3">
+          <div className="flex w-full flex-col gap-1">
             <span className="font-medium text-white">Tab Transition</span>
             <span className="text-neutral-400">
               Exploring blur transitions in tab navigation
             </span>
           </div>
           <div className="flex flex-wrap gap-2">
-            <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
-              headlessui
-            </div>
-            <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
-              tailwind
-            </div>
-            <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
-              framer-motion
-            </div>
+            <div className={tagClassNames}>headlessui</div>
+            <div className={tagClassNames}>tailwind</div>
+            <div className={tagClassNames}>framer-motion</div>
           </div>
         </div>
         <div className="flex aspect-square w-full flex-shrink-0 items-center justify-center border border-transparent bg-neutral-950 sm:border-neutral-800 md:w-2/3">
@@ -79,12 +68,8 @@ export default function Home() {
             </span>
           </div>
           <div className="flex flex-wrap gap-2">
-            <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
-              tailwind
-            </div>
-            <div className="rounded-md bg-neutral-700 px-1.5 py-1 text-sm text-neutral-100">
-              framer-motion
-            </div>
+            <div className={tagClassNames}>tailwind</div>
+            <div className={tagClassNames}>framer-motion</div>
           </div>
         </div>
         <div className="flex aspect-square w-full flex-shrink-0 items-center justify-center border border-transparent bg-neutral-950 sm:border-neutral-800 md:w-2/3">

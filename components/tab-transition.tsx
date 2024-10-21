@@ -1,5 +1,4 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
-import clsx from "clsx";
 import { motion } from "framer-motion";
 
 export default function TabTransition() {

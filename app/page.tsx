@@ -1,5 +1,5 @@
 "use client";
-import { ColorPicker, EventTimeSelect, TabTransition } from "@/components";
+import { ColorPicker, DateInput, TabTransition } from "@/components";
 
 export default function Home() {
   return (
@@ -11,8 +11,8 @@ export default function Home() {
           Prankster.
         </h1>
         <h2 className="text-xl text-neutral-300">
-          This is my repository of explorations and experiments in interaction
-          and usability. If you want to reach out and connect, drop me a line{" "}
+          This is essentially like my diary of explorations in interaction and
+          usability. If you want to reach out and connect, drop me a line{" "}
           <a className="text-white underline" href="mailto:kyle@kyleconrad.me">
             here
           </a>
@@ -39,8 +39,8 @@ export default function Home() {
           </div>
         </div>
         <div className="flex aspect-square w-full flex-shrink-0 items-center justify-center border border-transparent bg-neutral-950 sm:border-neutral-800 md:w-2/3">
-          <div className="rounded-md bg-neutral-800 px-6 py-4 shadow-border-shadow">
-            <EventTimeSelect></EventTimeSelect>
+          <div className="rounded-md bg-neutral-800 px-6 pb-8 pt-4 shadow-border-shadow">
+            <DateInput></DateInput>
           </div>
         </div>
       </section>

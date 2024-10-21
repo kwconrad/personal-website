@@ -30,3 +30,58 @@ button {
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+/* Date Picker */
+
+.react-datepicker {
+  @apply overflow-hidden rounded-md border border-solid border-neutral-700 shadow-border-shadow;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {
+  @apply fill-neutral-800 stroke-neutral-700 text-neutral-800;
+}
+
+.react-datepicker__month-container {
+  @apply rounded-none bg-neutral-800 font-normal;
+}
+.react-datepicker__month {
+  @apply rounded-none bg-neutral-800 font-normal;
+}
+
+.react-datepicker__header {
+  @apply bg-neutral-800 text-white; /* Header background and text color */
+}
+
+h2.react-datepicker__current-month {
+  @apply bg-neutral-800 font-normal text-white;
+}
+
+div.react-datepicker__day-name {
+  @apply bg-neutral-800 font-normal text-neutral-400;
+}
+
+.react-datepicker__day {
+  @apply border border-transparent text-neutral-200; /* Regular day text color */
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  @apply bg-neutral-700 text-white; /* Selected day styling */
+}
+
+.react-datepicker__day--today {
+  @apply rounded-md border border-dashed border-neutral-200 bg-transparent text-white; /* Selected day styling */
+}
+
+.react-datepicker__day:hover,
+.react-datepicker__day:not([aria-disabled="true"]):hover {
+  @apply scale-90 transform border border-neutral-500 bg-neutral-700 transition-transform duration-200 ease-in-out hover:scale-105 hover:border-solid hover:shadow-lg active:scale-95; /* Day hover styling */
+}
+
+.react-datepicker__current-month {
+  @apply font-bold; /* Bold month label */
+}
+
+.react-datepicker__navigation {
+  @apply text-indigo-500; /* Arrow buttons styling */
+}

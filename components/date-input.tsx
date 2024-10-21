@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { DatePicker } from "@/components";
 
-export default function EventTimeSelect() {
+export default function DateInput() {
   const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
 
   return (

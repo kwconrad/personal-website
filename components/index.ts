@@ -4,4 +4,4 @@ export { default as Select } from "./select";
 export { default as DatePicker } from "./date-picker";
 export { default as TabTransition } from "./tab-transition";
 export { default as ColorPicker } from "./color-picker";
-export { default as EventTimeSelect } from "./event-time-select";
+export { default as EventTimeSelect } from "./date-input";

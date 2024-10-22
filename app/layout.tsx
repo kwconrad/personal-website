@@ -21,9 +21,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/kib5awe.css" />
       </head>
       <body className="flex h-full min-h-screen w-full justify-center overflow-x-hidden overflow-y-scroll bg-neutral-950">
-        <div className="flex h-full w-full max-w-4xl flex-col px-4">
+        <div className="flex h-full w-full max-w-4xl flex-col">
           <Header />
-          <div className="flex flex-grow">{children}</div>
+          <div className="flex flex-grow px-4">{children}</div>
           <Footer />
         </div>
       </body>

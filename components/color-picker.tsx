@@ -54,8 +54,8 @@ export default function ColorPicker() {
                     opacity: 0,
                   }}
                   transition={{
-                    duration: 0.2,
-                    ease: [0.75, 0, 0.3, 1],
+                    duration: 0.1,
+                    ease: "easeInOut",
                   }}
                   className={clsx(
                     "z-10 h-11 w-11 rounded-full",
@@ -69,7 +69,7 @@ export default function ColorPicker() {
                 {selectedColor === color && (
                   <MotionCheckIcon
                     initial={{
-                      scale: 0.5,
+                      scale: 1,
                       opacity: 0,
                     }}
                     animate={{
@@ -82,8 +82,8 @@ export default function ColorPicker() {
                     }}
                     transition={{
                       delay: 0.1,
-                      duration: 0.2,
-                      ease: [0.75, 0, 0.3, 1],
+                      duration: 0.1,
+                      ease: "easeInOut",
                     }}
                     className="h-5 w-5 text-white"
                   ></MotionCheckIcon>

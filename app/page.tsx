@@ -21,21 +21,23 @@ export default function Home() {
         </h2>
       </section>
       <section className="flex w-full flex-shrink-0 flex-col gap-12 md:flex-row">
-        <div className="flex flex-col gap-3">
-          <div className="flex w-full flex-col gap-1">
-            <span className="font-medium text-white">Date Input</span>
+        <div className="flex flex-col gap-2">
+          <div className="flex w-full flex-col">
+            <span className="font-medium text-white">Color Picker</span>
             <span className="text-neutral-400">
-              This is an exploration into some microinteractions in a date
-              input.
+              This is an element of a larger modal that I built. I wanted to
+              iterate on the micro-interaction and create something unique, so I
+              separated the color picking experience out from the modal itself.
             </span>
           </div>
           <div className="flex flex-wrap gap-2">
             <div className={tagClassNames}>tailwind</div>
+            <div className={tagClassNames}>framer-motion</div>
           </div>
         </div>
         <div className="flex aspect-square w-full flex-shrink-0 items-center justify-center border border-transparent bg-neutral-950 sm:border-neutral-800 md:w-2/3">
-          <div className="rounded-md bg-neutral-800 px-6 pb-8 pt-4 shadow-border-shadow">
-            <DateInput></DateInput>
+          <div className="rounded-md bg-neutral-800 px-6 py-4 shadow-border-shadow">
+            <ColorPicker></ColorPicker>
           </div>
         </div>
       </section>
@@ -58,23 +60,21 @@ export default function Home() {
         </div>
       </section>
       <section className="flex w-full flex-shrink-0 flex-col gap-12 md:flex-row">
-        <div className="flex flex-col gap-2">
-          <div className="flex w-full flex-col">
-            <span className="font-medium text-white">Color Picker</span>
+        <div className="flex flex-col gap-3">
+          <div className="flex w-full flex-col gap-1">
+            <span className="font-medium text-white">Date Input</span>
             <span className="text-neutral-400">
-              This is an element of a larger modal that I built. I wanted to
-              iterate on the micro-interaction and create something unique, so I
-              separated the color picking experience out from the modal itself.
+              This is an exploration into some microinteractions in a date
+              input.
             </span>
           </div>
           <div className="flex flex-wrap gap-2">
             <div className={tagClassNames}>tailwind</div>
-            <div className={tagClassNames}>framer-motion</div>
           </div>
         </div>
         <div className="flex aspect-square w-full flex-shrink-0 items-center justify-center border border-transparent bg-neutral-950 sm:border-neutral-800 md:w-2/3">
-          <div className="rounded-md bg-neutral-800 px-6 py-4 shadow-border-shadow">
-            <ColorPicker></ColorPicker>
+          <div className="rounded-md bg-neutral-800 px-6 pb-8 pt-4 shadow-border-shadow">
+            <DateInput></DateInput>
           </div>
         </div>
       </section>

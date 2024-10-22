@@ -37,7 +37,7 @@ button {
   @apply overflow-hidden rounded-md border border-solid border-neutral-700 shadow-border-shadow;
 }
 
-.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {
+.react-datepicker-popper[data-placement] .react-datepicker__triangle {
   @apply fill-neutral-800 stroke-neutral-700 text-neutral-800;
 }
 
@@ -66,11 +66,11 @@ div.react-datepicker__day-name {
 
 .react-datepicker__day--selected,
 .react-datepicker__day--keyboard-selected {
-  @apply bg-neutral-700 text-white; /* Selected day styling */
+  @apply bg-neutral-300 text-neutral-900; /* Selected day styling */
 }
 
 .react-datepicker__day--today {
-  @apply rounded-md border border-dashed border-neutral-200 bg-transparent text-white; /* Selected day styling */
+  @apply rounded-md border border-dotted border-neutral-200 bg-transparent text-white; /* Selected day styling */
 }
 
 .react-datepicker__day:hover,

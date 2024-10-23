@@ -44,6 +44,7 @@ button {
 .react-datepicker__month-container {
   @apply rounded-none bg-neutral-800 font-normal;
 }
+
 .react-datepicker__month {
   @apply rounded-none bg-neutral-800 font-normal;
 }

@@ -18,7 +18,7 @@ export default function Home() {
         <div>
           <a
             href="mailto:conradwebdev@gmail.com"
-            className="duration-400 flex w-full justify-center rounded-md px-6 py-4 font-sans text-xl font-bold shadow-xl transition-all ease-in-out hover:hue-rotate-180"
+            className="duration-400 flex w-full justify-center rounded-md px-6 py-4 font-sans text-xl font-bold shadow-xl transition-all ease-in-out hover:hue-rotate-180 md:w-fit"
             style={{
               backgroundColor: "hsla(359,83%,53%,1)",
               backgroundImage:

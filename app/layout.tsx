@@ -20,11 +20,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="stylesheet" href="https://use.typekit.net/kib5awe.css" />
       </head>
-      <body className="flex h-full min-h-screen w-full justify-center overflow-x-hidden overflow-y-scroll bg-neutral-950">
-        <div className="flex h-full w-full flex-col items-center">
+      <body className="flex h-full min-h-screen w-full justify-center overflow-x-hidden overflow-y-scroll bg-gradient-to-br from-neutral-800 to-neutral-950">
+        <div className="grainy-background flex h-full w-full flex-col items-center">
           <Header />
-          <div className="flex w-full max-w-3xl flex-col">
-            <div className="flex flex-grow px-4">{children}</div>
+          <div className="flex h-full w-full max-w-5xl flex-col">
+            <div className="flex h-full flex-grow px-4">{children}</div>
           </div>
           <Footer />
         </div>

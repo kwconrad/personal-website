@@ -8,8 +8,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["ivyjournal", "serif"],
-        sans: ["neue-haas-grotesk-text", "sans-serif"],
+        serif: ["freight-text-pro", "serif"],
+        sans: ["neue-haas-grotesk-display", "sans-serif"],
       },
       colors: {
         interface: {

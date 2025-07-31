@@ -6,22 +6,22 @@ export function Navigation() {
           <span className="text-white font-sans">Kyle Conrad</span>
         </div>
         <div className="col-span-6 flex justify-center">
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-8 group">
             <a
               href="#work"
-              className="tracking-wide text-white hover:text-white/70 transform scale-100 hover:scale-105 transition-all text-sm"
+              className="tracking-wide text-white transform scale-100 hover:scale-105 transition-all text-sm group-hover:blur-xs hover:!blur-0"
             >
               Work
             </a>
             <a
               href="#about"
-              className="tracking-wide text-white hover:text-white/70 transform scale-100 hover:scale-105 transition-all text-sm"
+              className="tracking-wide text-white transform scale-100 hover:scale-105 transition-all text-sm group-hover:blur-xs hover:!blur-0"
             >
               About
             </a>
             <a
               href="#contact"
-              className="tracking-wide text-white hover:text-white/70 transform scale-100 hover:scale-105 transition-all text-sm"
+              className="tracking-wide text-white transform scale-100 hover:scale-105 transition-all text-sm group-hover:blur-xs hover:!blur-0"
             >
               Contact
             </a>

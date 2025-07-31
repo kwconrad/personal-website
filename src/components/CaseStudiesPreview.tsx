@@ -13,10 +13,9 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: "01",
-    title:
-      "“Who Am I Talking To?”: Restoring Trust and Clarity in LinkedIn Conversations",
+    title: "Restoring Trust and Clarity in LinkedIn Conversations",
     description:
-      "Examines the role of AI and identity in Linkedins conversation features, proposing a design that enhances user trust and clarity.",
+      "Examines the role of AI and identity in LinkedIn's messaging features, proposing designs that enhance user trust and clarity.",
     tags: [
       "Interface Design",
       "Emotional UX",
@@ -25,7 +24,7 @@ const caseStudies: CaseStudy[] = [
     ],
     impact: "User trust improved",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "https://images.metmuseum.org/CRDImages/ad/original/DP-25621-001.jpg",
     year: "2025",
   },
 ];
@@ -42,7 +41,7 @@ export function CaseStudiesPreview() {
             </h2>
           </div>
           <div className="col-span-4 flex flex-col justify-end">
-            <div className="text-sm tracking-wider text-white/60 mb-2">
+            <div className="text-sm uppercase tracking-wider text-white/60 mb-2">
               Current projects
             </div>
             <div className="text-white">
@@ -60,7 +59,7 @@ export function CaseStudiesPreview() {
             >
               {/* Project Info */}
               <div className="col-span-8">
-                <h3 className="text-3xl font-black text-white mb-4 group-hover:text-white/80 transition-colors">
+                <h3 className="text-3xl font-black group-hover:text-white mb-4 text-white/80 transition-colors">
                   {study.title}
                 </h3>
                 <p className="text-white/80 mb-6 leading-relaxed">

@@ -35,12 +35,12 @@ export function CaseStudiesPreview() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="grid grid-cols-12 gap-6 mb-16">
-          <div className="col-span-8">
+          <div className="col-span-12 md:col-span-8">
             <h2 className="text-6xl md:text-7xl font-black text-black tracking-tighter leading-none">
               Case Studies
             </h2>
           </div>
-          <div className="col-span-4 flex flex-col justify-end">
+          <div className="col-span-12 md:col-span-4 flex flex-col justify-end">
             <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
               Current projects
             </div>
@@ -55,10 +55,10 @@ export function CaseStudiesPreview() {
           {caseStudies.map((study) => (
             <div
               key={study.id}
-              className="grid grid-cols-12 gap-6 border-t border-black/20 pt-12 group cursor-pointer"
+              className="flex flex-col-reverse md:flex-col gap-6 border-t border-black/20 pt-12 group cursor-pointer"
             >
               {/* Project Info */}
-              <div className="col-span-8">
+              <div className="w-full md:w-2/3">
                 <h3 className="text-3xl font-black group-hover:text-black mb-4 text-black/80 transition-colors">
                   {study.title}
                 </h3>
@@ -88,7 +88,7 @@ export function CaseStudiesPreview() {
               </div>
 
               {/* Image */}
-              <div className="col-span-4">
+              <div className="w-full md:w-1/3">
                 <div className="aspect-[4/3] bg-black/5 overflow-hidden">
                   <img
                     src={study.image}
@@ -97,7 +97,7 @@ export function CaseStudiesPreview() {
                   />
                 </div>
 
-                <div className="flex items-center justify-between mt-4">
+                <div className="hidden md:flex items-center justify-between mt-4">
                   <div className="text-sm text-black/60 group-hover:text-black transition-colors">
                     View Case Study
                   </div>

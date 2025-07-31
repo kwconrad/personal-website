@@ -49,12 +49,12 @@ export function About() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="grid grid-cols-12 gap-6 mb-16">
-          <div className="col-span-4">
+          <div className="col-span-12 md:col-span-4">
             <h2 className="text-6xl font-black text-white tracking-tighter leading-none">
               About
             </h2>
           </div>
-          <div className="col-span-8">
+          <div className="col-span-12 md:col-span-8">
             <div className="text-xl text-white leading-relaxed">
               Design Engineer with 8+ years working across design and frontend
               engineering. I craft digital experiences that are both beautiful
@@ -66,7 +66,7 @@ export function About() {
         {/* Main Content Grid */}
         <div className="grid grid-cols-12 gap-6">
           {/* Skills */}
-          <div className="col-span-8">
+          <div className="col-span-12 md:col-span-8">
             <div className="grid grid-cols-3 gap-8">
               {skills.map((skill) => (
                 <div key={skill.category}>
@@ -100,7 +100,7 @@ export function About() {
           </div>
 
           {/* Experience */}
-          <div className="col-span-4">
+          <div className="col-span-12 md:col-span-4">
             <div className="text-sm uppercase tracking-wider text-white/60 mb-8">
               Experience
             </div>

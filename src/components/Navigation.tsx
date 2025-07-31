@@ -1,7 +1,7 @@
 export function Navigation() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/20">
-      <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto px-6 py-6">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur border-white/20">
+      <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto h-16 items-center px-6">
         <div className="col-span-3 flex items-center">
           <span className="text-white font-sans">Kyle Conrad</span>
         </div>

@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
+  --yellow: #f1ca4a;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
   --primary: #030213;

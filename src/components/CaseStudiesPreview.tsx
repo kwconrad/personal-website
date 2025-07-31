@@ -31,20 +31,20 @@ const caseStudies: CaseStudy[] = [
 
 export function CaseStudiesPreview() {
   return (
-    <section id="case-studies" className="py-20 bg-black">
+    <section id="case-studies" className="py-20 bg-neutral-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-8">
-            <h2 className="text-6xl md:text-7xl font-black text-white tracking-tighter leading-none">
+            <h2 className="text-6xl md:text-7xl font-black text-black tracking-tighter leading-none">
               Case Studies
             </h2>
           </div>
           <div className="col-span-4 flex flex-col justify-end">
-            <div className="text-sm uppercase tracking-wider text-white/60 mb-2">
+            <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
               Current projects
             </div>
-            <div className="text-white">
+            <div className="text-black">
               Impact-driven solutions for startups and enterprises
             </div>
           </div>
@@ -55,30 +55,30 @@ export function CaseStudiesPreview() {
           {caseStudies.map((study) => (
             <div
               key={study.id}
-              className="grid grid-cols-12 gap-6 border-t border-white/20 pt-12 group cursor-pointer"
+              className="grid grid-cols-12 gap-6 border-t border-black/20 pt-12 group cursor-pointer"
             >
               {/* Project Info */}
               <div className="col-span-8">
-                <h3 className="text-3xl font-black group-hover:text-white mb-4 text-white/80 transition-colors">
+                <h3 className="text-3xl font-black group-hover:text-black mb-4 text-black/80 transition-colors">
                   {study.title}
                 </h3>
-                <p className="text-white/80 mb-6 leading-relaxed">
+                <p className="text-black/80 mb-6 leading-relaxed">
                   {study.description}
                 </p>
 
                 <div className="space-y-4">
                   <div>
-                    <div className="text-sm tracking-wider uppercase text-white/60 mb-1">
+                    <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
                       Impact
                     </div>
-                    <div className="text-white">{study.impact}</div>
+                    <div className="text-black">{study.impact}</div>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
                     {study.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs tracking-wide px-3 py-1 border border-neutral-600 text-white rounded-sm"
+                        className="text-xs tracking-wide px-3 py-1 border border-neutral-400 text-black rounded-sm"
                       >
                         {tag}
                       </span>
@@ -89,7 +89,7 @@ export function CaseStudiesPreview() {
 
               {/* Image */}
               <div className="col-span-4">
-                <div className="aspect-[4/3] bg-white/5 overflow-hidden">
+                <div className="aspect-[4/3] bg-black/5 overflow-hidden">
                   <img
                     src={study.image}
                     alt={study.title}
@@ -98,10 +98,10 @@ export function CaseStudiesPreview() {
                 </div>
 
                 <div className="flex items-center justify-between mt-4">
-                  <div className="text-sm text-white/60 group-hover:text-white transition-colors">
+                  <div className="text-sm text-black/60 group-hover:text-black transition-colors">
                     View Case Study
                   </div>
-                  <ArrowRight className="w-4 h-4 text-white -translate-x-2 group-hover:translate-x-0 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-black -translate-x-2 group-hover:translate-x-0 transition-transform" />
                 </div>
               </div>
             </div>

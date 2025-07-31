@@ -23,6 +23,7 @@ export default {
         sans: ["Inter", "ui-sans-serif", "system-ui"],
       },
       colors: {
+        yellow: "hsl(var(--yellow))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -1,6 +1,6 @@
 export function Navigation() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-neutral-50 backdrop-invert">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur">
       <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto h-16 items-center px-6">
         <div className="col-span-6 flex items-center">
           <div className="flex gap-2 items-center">
@@ -35,7 +35,7 @@ export function Navigation() {
           <a
             href="#resume"
             data-cursor="button"
-            className="transform scale-100 hover:scale-105 text-black border border-solid border-black bg-white rounded-md px-4 py-2 hover:bg-black hover:text-white hover:border-white transition-all text-sm"
+            className="transform scale-100 hover:scale-105 text-neutral-800 bg-neutral-200 font-medium hover:bg-neutral-300 rounded-md px-3 py-1.5 hover:text-black hover:border-white transition-all text-sm"
           >
             Resume
           </a>

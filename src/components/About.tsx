@@ -90,11 +90,10 @@ export function About() {
                 Philosophy
               </div>
               <div className="text-white leading-relaxed">
-                Great design engineering happens at the intersection of user
-                needs, business goals, and clever technical implementation. I
-                believe in systematic thinking, iterative shipping, and building
-                products that solve real problems, both for the business and the
-                user.
+                I believe in the power of design to solve complex problems and
+                create meaningful connections. My approach combines empathy,
+                creativity, and engineering expertise to provide solutions that
+                make sense for both users and the business.
               </div>
             </div>
           </div>

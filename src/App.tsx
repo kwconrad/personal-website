@@ -3,23 +3,32 @@ import { Hero } from "./components/Hero";
 import { CaseStudiesPreview } from "./components/CaseStudiesPreview";
 import { About } from "./components/About";
 import { Footer } from "./components/Footer";
+import { CaseStudyDetail } from "./components/CaseStudyDetail";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { Contact } from "./components/Contact";
 
-export default function App() {
-  const socialLinks = {
-    github: "https://github.com/kwconrad",
-    linkedin: "https://linkedin.com/in/kylewconrad",
-    twitter: "https://x.com/a_history_of_kyle",
-  };
-
+function HomePage() {
   return (
-    <div className="min-h-full bg-neutral-50 cursor-none relative">
+    <>
       <Navigation />
       <Hero />
       <CaseStudiesPreview />
       <About />
       {/* <Contact /> */}
-      <Footer socialLinks={socialLinks} />
-    </div>
+      <Footer />
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <div className="min-h-full bg-neutral-50 relative">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/case-study/:id" element={<CaseStudyDetail />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }

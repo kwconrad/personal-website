@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface CaseStudy {
   id: string;
@@ -22,7 +23,7 @@ const caseStudies: CaseStudy[] = [
       "Information Architecture",
       "UX Research",
     ],
-    impact: "User trust improved",
+    impact: "Improve user trust and clarity of identity in conversations",
     image:
       "https://images.metmuseum.org/CRDImages/ad/original/DP-25621-001.jpg",
     year: "2025",
@@ -44,18 +45,17 @@ export function CaseStudiesPreview() {
             <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
               Current projects
             </div>
-            <div className="text-black">
-              Impact-driven solutions for startups and enterprises
-            </div>
           </div>
         </div>
 
         {/* Case Studies Grid */}
         <div className="space-y-12">
           {caseStudies.map((study) => (
-            <div
+            <Link
               key={study.id}
-              className="flex flex-col-reverse md:flex-col gap-6 border-t border-black/20 pt-12 group cursor-pointer"
+              to={`/case-study/${study.id}`}
+              className="flex flex-col-reverse md:flex-row gap-6 border-t border-black/20 pt-12 group cursor-pointer"
+              data-cursor="button"
             >
               {/* Project Info */}
               <div className="w-full md:w-2/3">
@@ -71,14 +71,14 @@ export function CaseStudiesPreview() {
                     <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
                       Impact
                     </div>
-                    <div className="text-black">{study.impact}</div>
+                    <div className="text-black font-medium">{study.impact}</div>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
                     {study.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs tracking-wide px-3 py-1 border border-neutral-400 text-black rounded-sm"
+                        className="text-neutral-700 bg-neutral-200 rounded-sm px-3 py-1.5 text-xs"
                       >
                         {tag}
                       </span>
@@ -93,7 +93,7 @@ export function CaseStudiesPreview() {
                   <img
                     src={study.image}
                     alt={study.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700"
                   />
                 </div>
 
@@ -104,7 +104,7 @@ export function CaseStudiesPreview() {
                   <ArrowRight className="w-4 h-4 text-black -translate-x-2 group-hover:translate-x-0 transition-transform" />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

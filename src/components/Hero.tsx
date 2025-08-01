@@ -41,7 +41,10 @@ export function Hero() {
                 <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
                   Status
                 </div>
-                <div className="text-lg text-black">Available for hire</div>
+                <div className="flex gap-2 items-center">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <div className="text-lg text-black">Available for hire</div>
+                </div>
               </div>
             </div>
           </div>
@@ -49,7 +52,7 @@ export function Hero() {
 
         {/* Bottom arrow */}
         <div className="hidden col-span-12 md:flex justify-center absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <ArrowDown className="w-6 h-6 text-black" />
+          <ArrowDown className="w-6 h-6 text-black animate-bounce" />
         </div>
       </div>
     </section>

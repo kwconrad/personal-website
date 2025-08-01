@@ -1,4 +1,19 @@
+import { ArrowDown } from "lucide-react";
+
 export function Navigation() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - 72; // 48px offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur">
       <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto h-16 items-center px-6">
@@ -32,13 +47,13 @@ export function Navigation() {
           </div>
         </div> */}
         <div className="col-span-6 flex items-center justify-end">
-          <a
-            href="#resume"
+          <button
+            onClick={() => scrollToSection("case-studies")}
             data-cursor="button"
-            className="transform scale-100 hover:scale-105 text-neutral-800 bg-neutral-200 font-medium hover:bg-neutral-300 rounded-md px-3 py-1.5 hover:text-black hover:border-white transition-all text-sm"
+            className="transform flex items-center gap-2 text-neutral-800 bg-neutral-200 font-medium rounded-md px-3 py-1.5 transition-all text-sm"
           >
-            Resume
-          </a>
+            <ArrowDown className="w-4 h-4 text-black" /> View Case Studies
+          </button>
         </div>
       </div>
     </nav>

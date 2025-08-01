@@ -125,7 +125,7 @@ export function About() {
                 Current Status
               </div>
               <div className="text-white mb-4">Available for new projects</div>
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
             </div>
           </div>
         </div>

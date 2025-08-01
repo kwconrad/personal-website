@@ -28,18 +28,20 @@ export function CaseStudiesPreview() {
               data-cursor="button"
             >
               {/* Project Info */}
-              <div className="w-full md:w-2/3">
-                <h3 className="text-3xl font-black group-hover:text-black mb-4 text-black/80 transition-colors">
-                  {study.title}
-                </h3>
-                <p className="text-black/80 mb-6 leading-relaxed">
-                  {study.description}
-                </p>
+              <div className="w-full md:w-2/3 flex flex-col gap-3">
+                <div className="flex flex-col">
+                  <h3 className="text-3xl font-black group-hover:text-black mb-4 text-black/80 transition-colors">
+                    {study.title}
+                  </h3>
+                  <p className="text-black/80 mb-6 text-lg leading-relaxed">
+                    {study.description}
+                  </p>
+                </div>
 
-                <div className="space-y-4">
+                <div className="flex flex-col gap-4">
                   <div>
                     <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
-                      Impact
+                      Outcome
                     </div>
                     <div className="text-black font-medium">
                       {study.impact || study.goal}
@@ -50,7 +52,7 @@ export function CaseStudiesPreview() {
                     {study.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-neutral-700 bg-neutral-200 rounded-sm px-3 py-1.5 text-xs"
+                        className="text-neutral-700 font-medium bg-neutral-200 rounded-sm px-3 py-1.5 text-xs"
                       >
                         {tag}
                       </span>
@@ -61,16 +63,16 @@ export function CaseStudiesPreview() {
 
               {/* Image */}
               <div className="w-full md:w-1/3">
-                <div className="aspect-[4/3] bg-black/5 overflow-hidden">
+                <div className="aspect-[3/4] bg-black/5 overflow-hidden">
                   <img
                     src={study.image}
                     alt={study.title}
-                    className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-700"
+                    className="w-full h-full object-cover scale-105 group-hover:scale-125 transition-transform"
                   />
                 </div>
 
                 <div className="hidden md:flex items-center justify-between mt-4">
-                  <div className="text-sm text-black/60 group-hover:text-black transition-colors">
+                  <div className="text-black/60 group-hover:text-black transition-colors">
                     View Case Study
                   </div>
                   <ArrowRight className="w-4 h-4 text-black -translate-x-2 group-hover:translate-x-0 transition-transform" />
@@ -79,15 +81,6 @@ export function CaseStudiesPreview() {
             </Link>
           ))}
         </div>
-
-        {/* View All Projects */}
-        {/* <div className="grid grid-cols-12 gap-6 mt-20">
-          <div className="col-span-8">
-            <button className="w-full border-2 border-white text-white hover:bg-white hover:text-black transition-all py-6 tracking-wide font-medium">
-              View All Projects
-            </button>
-          </div>
-        </div> */}
       </div>
     </section>
   );

@@ -55,7 +55,7 @@ export function Navigation() {
             data-cursor="button"
             className="transform flex items-center gap-2 text-neutral-800 bg-neutral-200 font-medium rounded-md px-3 py-1.5 transition-all text-sm"
           >
-            <ArrowDown className="w-4 h-4 text-black" /> View Case Studies
+            Case Studies
           </button>
         </div>
       </div>

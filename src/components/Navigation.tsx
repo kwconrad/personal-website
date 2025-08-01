@@ -19,7 +19,10 @@ export function Navigation() {
       <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto h-16 items-center px-6">
         <div className="col-span-6 flex items-center">
           <div className="flex gap-2 items-center">
-            <span className="text-black font-sans" data-cursor="text">
+            <span
+              className="text-black font-sans font-medium"
+              data-cursor="text"
+            >
               Kyle Conrad
             </span>
           </div>

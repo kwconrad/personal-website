@@ -41,19 +41,26 @@ const components = {
       {children}
     </h3>
   ),
+  a: ({ children, ...props }: any) => (
+    <a
+      className="text-blue-600 text-lg hover:text-blue-800 transition-colors underline"
+      {...props}
+    >
+      {children}
+    </a>
+  ),
   p: ({ children, ...props }: any) => (
-    <p className="text-black/80 leading-relaxed mb-6" {...props}>
+    <p className="text-black/80 text-lg leading-relaxed mb-6" {...props}>
       {children}
     </p>
   ),
   ul: ({ children, ...props }: any) => (
-    <ul className="space-y-3 mb-6" {...props}>
+    <ul className="space-y-3 mb-6 pl-4 list-disc" {...props}>
       {children}
     </ul>
   ),
   li: ({ children, ...props }: any) => (
-    <li className="text-black/80 flex items-start gap-3" {...props}>
-      <span className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></span>
+    <li className="text-black/80 text-lg" {...props}>
       {children}
     </li>
   ),
@@ -103,38 +110,9 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
         <section className="pt-24 pb-12">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-12 gap-6">
-              <div className="col-span-12 lg:col-span-8">
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4 text-sm text-black/60">
-                    <span>{frontmatter.year}</span>
-                    <span>•</span>
-                    <span>Case Study {frontmatter.id}</span>
-                  </div>
-
-                  {frontmatter.description && (
-                    <p className="text-xl text-black/80 leading-relaxed max-w-3xl">
-                      {frontmatter.description}
-                    </p>
-                  )}
-
-                  {frontmatter.tags && (
-                    <div className="flex flex-wrap gap-2 pt-4">
-                      {frontmatter.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-neutral-700 bg-neutral-200 rounded-sm px-3 py-1.5 text-sm"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-
               {frontmatter.image && (
                 <div className="col-span-12 lg:col-span-4">
-                  <div className="aspect-[4/3] bg-black/5 overflow-hidden rounded-lg">
+                  <div className="aspect-[16/9] bg-black/5 overflow-hidden rounded-md border border-solid border-neutral-300">
                     <img
                       src={frontmatter.image}
                       alt={frontmatter.title}
@@ -143,6 +121,29 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
                   </div>
                 </div>
               )}
+
+              <div className="col-span-12 lg:col-span-8">
+                <div className="space-y-4">
+                  {frontmatter.title && (
+                    <h1 className="text-4xl font-bold text-black">
+                      {frontmatter.title}
+                    </h1>
+                  )}
+
+                  {frontmatter.tags && (
+                    <div className="flex flex-wrap gap-2 pt-4">
+                      {frontmatter.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-medium text-neutral-700 bg-neutral-200 rounded-sm px-3 py-1.5 text-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -12,6 +12,11 @@ export function CaseStudyDetail() {
   // Get frontmatter from static data
   const frontmatter = caseStudiesData.find((study) => study.slug === slug);
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     const loadCaseStudy = async () => {
       if (!slug || !caseStudyModules[slug] || !frontmatter) {

@@ -93,7 +93,7 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
     <div className="min-h-screen bg-neutral-50">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-neutral-50/80 backdrop-blur-sm border-b border-black/10">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center">
+        <div className="max-w-4xl mx-auto px-6 h-16 flex items-center">
           <Link
             to="/"
             className="flex items-center gap-2 text-black hover:text-black/60 transition-colors"
@@ -108,11 +108,11 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
       {/* Hero Section */}
       {frontmatter && (
         <section className="pt-24 pb-12">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-4xl mx-auto px-6">
             <div className="grid grid-cols-12 gap-6">
               {frontmatter.image && (
-                <div className="col-span-12 lg:col-span-4">
-                  <div className="aspect-[16/9] bg-black/5 overflow-hidden rounded-md border border-solid border-neutral-300">
+                <div className="col-span-12">
+                  <div className="aspect-[16/9] md:aspect-[18/6] bg-black/5 overflow-hidden rounded-md border border-solid border-neutral-300">
                     <img
                       src={frontmatter.image}
                       alt={frontmatter.title}

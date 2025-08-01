@@ -33,17 +33,8 @@ export function Hero() {
                   Focus
                 </div>
                 <div className="text-lg text-black">
-                  Crafting intuitive, user-centered, and sometimes immersive
-                  digital experiences
-                </div>
-              </div>
-              <div>
-                <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
-                  Status
-                </div>
-                <div className="flex gap-2 items-center">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <div className="text-lg text-black">Available for hire</div>
+                  Crafting intuitive, user-centered, and immersive digital
+                  experiences
                 </div>
               </div>
             </div>

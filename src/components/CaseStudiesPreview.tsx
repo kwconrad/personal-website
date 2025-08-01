@@ -7,19 +7,14 @@ export function CaseStudiesPreview() {
   const caseStudies = getAllCaseStudyMetadata();
 
   return (
-    <section id="case-studies" className="py-20 bg-neutral-50">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="case-studies" className="bg-neutral-50">
+      <div className="max-w-7xl mx-auto px-6 pb-20">
         {/* Header */}
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 md:col-span-8">
-            <h2 className="text-6xl md:text-7xl font-black text-black tracking-tighter leading-none">
+            <h2 className="text-5xl md:text-7xl font-black text-black tracking-tighter leading-none">
               Case Studies
             </h2>
-          </div>
-          <div className="col-span-12 md:col-span-4 flex flex-col justify-end">
-            <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
-              Current projects
-            </div>
           </div>
         </div>
 

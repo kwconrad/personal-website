@@ -50,12 +50,12 @@ export function About() {
         {/* Header */}
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 md:col-span-4">
-            <h2 className="text-6xl font-black text-white tracking-tighter leading-none">
+            <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
               About
             </h2>
           </div>
           <div className="col-span-12 md:col-span-8">
-            <div className="text-xl text-white leading-relaxed">
+            <div className="text-lg md:text-xl text-white leading-relaxed">
               Design Engineer with 8+ years working across design and frontend
               engineering. I craft digital experiences that are both beautiful
               and impactful, with a focus on measurable business outcomes.
@@ -67,7 +67,7 @@ export function About() {
         <div className="grid grid-cols-12 gap-6">
           {/* Skills */}
           <div className="col-span-12 md:col-span-8">
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {skills.map((skill) => (
                 <div key={skill.category}>
                   <div className="text-sm uppercase tracking-wider text-white/60 mb-4">
@@ -75,7 +75,10 @@ export function About() {
                   </div>
                   <ul className="space-y-2">
                     {skill.items.map((item) => (
-                      <li key={item} className="text-white text-sm">
+                      <li
+                        key={item}
+                        className="text-white text-lg md:text-base"
+                      >
                         {item}
                       </li>
                     ))}
@@ -89,13 +92,12 @@ export function About() {
               <div className="text-sm uppercase tracking-wider text-white/60 mb-4">
                 Philosophy
               </div>
-              <div className="text-white leading-relaxed">
-                I'm ruthless about simplicity. I'm bullish on designers as
-                problem solvers and believe combining design with context is a
-                superpower that will take us far into the FUTURE. I have a deep
-                understanding of technical constraints and limitations, and
-                focus on designing solutions that push the limits of what can be
-                done.
+              <div className="text-white leading-relaxed text-xl md:text-lg">
+                I try to take a subtractive approach to design, removing
+                friction points and enhancing usability. I believe simplicity
+                isn't a luxury; it's clarity. With a deep background in frontend
+                engineering, I design with constraints in mind and treat
+                limitations as creative tools.
               </div>
             </div>
           </div>

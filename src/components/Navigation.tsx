@@ -1,5 +1,3 @@
-import { ArrowDown } from "lucide-react";
-
 export function Navigation() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);

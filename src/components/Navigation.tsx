@@ -1,17 +1,6 @@
+import { scrollToSection } from "@/lib/utils";
+
 export function Navigation() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - 72; // 48px offset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur">
       <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto h-16 items-center px-6">

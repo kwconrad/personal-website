@@ -34,22 +34,20 @@ export function CaseStudiesPreview() {
                     {study.title}
                   </h3>
                   <p className="text-black/80 mb-6 text-lg leading-relaxed">
-                    {study.description}
+                    {study.overview}
                   </p>
                 </div>
 
                 <div className="flex flex-col gap-4">
                   <div>
                     <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
-                      Outcome
+                      Goal
                     </div>
-                    <div className="text-black font-medium">
-                      {study.impact || study.goal}
-                    </div>
+                    <div className="text-black font-medium">{study.goal}</div>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
-                    {study.tags.map((tag) => (
+                    {study.techniques.map((tag) => (
                       <span
                         key={tag}
                         className="text-neutral-700 font-medium bg-neutral-200 rounded-sm px-3 py-1.5 text-xs"

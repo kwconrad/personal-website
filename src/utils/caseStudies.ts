@@ -100,10 +100,11 @@ export interface CaseStudyMetadata {
   id: string;
   slug: string;
   title: string;
-  description: string;
-  tags: string[];
+  overview: string;
+  tools: string[];
+  techniques: string[];
+  role?: string;
   goal?: string;
-  impact?: string;
   image: string;
   year: string;
 }

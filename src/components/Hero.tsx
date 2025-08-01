@@ -1,3 +1,4 @@
+import { scrollToSection } from "@/lib/utils";
 import { ArrowDown } from "lucide-react";
 
 export function Hero() {
@@ -15,7 +16,7 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-8">
               <div>
                 <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
                   Discipline
@@ -42,7 +43,10 @@ export function Hero() {
         </div>
 
         {/* Bottom arrow */}
-        <div className="hidden col-span-12 md:flex justify-center absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div
+          onClick={() => scrollToSection("case-studies")}
+          className="hidden col-span-12 md:flex justify-center absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
           <ArrowDown className="w-6 h-6 text-black animate-bounce" />
         </div>
       </div>

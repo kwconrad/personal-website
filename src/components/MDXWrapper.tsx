@@ -6,12 +6,15 @@ interface MDXWrapperProps {
   children: React.ReactNode;
   frontmatter?: {
     title?: string;
-    description?: string;
-    tags?: string[];
+    overview?: string;
+    slug?: string;
+    role?: string;
+    goal?: string;
+    tools?: string[];
+    techniques?: string[];
     year?: string;
     id?: string;
     image?: string;
-    impact?: string;
   };
 }
 
@@ -50,7 +53,7 @@ const components = {
     </a>
   ),
   p: ({ children, ...props }: any) => (
-    <p className="text-black/80 text-lg leading-relaxed mb-6" {...props}>
+    <p className="text-black/80 text-lg leading-relaxed mb-2" {...props}>
       {children}
     </p>
   ),
@@ -66,7 +69,7 @@ const components = {
   ),
   blockquote: ({ children, ...props }: any) => (
     <blockquote
-      className="border-l-4 border-black/20 pl-6 py-4 my-8 bg-black/5 italic text-black/80"
+      className="border-l-4 border-black/20 my-6 p-6 bg-black/5 italic text-black/80"
       {...props}
     >
       {children}
@@ -107,12 +110,12 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
 
       {/* Hero Section */}
       {frontmatter && (
-        <section className="pt-24 pb-12">
+        <section className="pt-24">
           <div className="max-w-4xl mx-auto px-6">
             <div className="grid grid-cols-12 gap-6">
               {frontmatter.image && (
                 <div className="col-span-12">
-                  <div className="aspect-[16/9] md:aspect-[18/6] bg-black/5 overflow-hidden rounded-md border border-solid border-neutral-300">
+                  <div className="aspect-[16/9] md:aspect-[18/6] bg-black/5 overflow-hidden border border-solid border-neutral-300">
                     <img
                       src={frontmatter.image}
                       alt={frontmatter.title}
@@ -121,28 +124,61 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
                   </div>
                 </div>
               )}
-
-              <div className="col-span-12 lg:col-span-8">
+              <div className="col-span-12">
                 <div className="space-y-4">
                   {frontmatter.title && (
                     <h1 className="text-4xl font-bold text-black">
                       {frontmatter.title}
                     </h1>
                   )}
-
-                  {frontmatter.tags && (
-                    <div className="flex flex-wrap gap-2 pt-4">
-                      {frontmatter.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-medium text-neutral-700 bg-neutral-200 rounded-sm px-3 py-1.5 text-sm"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  {frontmatter.overview && (
+                    <h1 className="text-xl text-black">
+                      {frontmatter.overview}
+                    </h1>
                   )}
                 </div>
+              </div>
+              {frontmatter.goal && (
+                <div className="col-span-6">
+                  <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
+                    Goal
+                  </div>
+                  <div className="text-black font-medium">
+                    {frontmatter.goal}
+                  </div>
+                </div>
+              )}
+              <div className="col-span-6 flex flex-col gap-6">
+                {frontmatter.role && (
+                  <div className="col-span-6">
+                    <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
+                      Role
+                    </div>
+                    <div className="text-black font-medium">
+                      {frontmatter.role}
+                    </div>
+                  </div>
+                )}
+                {frontmatter.tools && (
+                  <div className="col-span-6">
+                    <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
+                      Tools
+                    </div>
+                    <div className="text-black font-medium">
+                      {frontmatter.tools.join(", ")}
+                    </div>
+                  </div>
+                )}
+                {frontmatter.techniques && (
+                  <div className="col-span-6">
+                    <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
+                      Techniques
+                    </div>
+                    <div className="text-black font-medium">
+                      {frontmatter.techniques.join(", ")}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -155,20 +191,6 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
           <MDXProvider components={components}>
             <div className="prose prose-lg max-w-none">{children}</div>
           </MDXProvider>
-        </div>
-      </section>
-
-      {/* Next Project */}
-      <section className="py-12 border-t border-black/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-black hover:text-black/60 transition-colors"
-            data-cursor="button"
-          >
-            View More Projects
-            <ArrowLeft className="w-4 h-4 rotate-180" />
-          </Link>
         </div>
       </section>
     </div>

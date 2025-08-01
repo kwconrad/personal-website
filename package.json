@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdx-js/react": "^3.1.0",
+    "@mdx-js/rollup": "^3.1.0",
+    "@types/mdx": "^2.0.13",
     "clsx": "^2.0.0",
     "framer-motion": "^12.23.12",
     "lodash": "^4.17.21",

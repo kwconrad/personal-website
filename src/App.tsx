@@ -26,7 +26,7 @@ export default function App() {
       <div className="min-h-full bg-neutral-50 relative">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/case-study/:id" element={<CaseStudyDetail />} />
+          <Route path="/case-study/:slug" element={<CaseStudyDetail />} />
         </Routes>
       </div>
     </Router>

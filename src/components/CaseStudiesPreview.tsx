@@ -1,36 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
-interface CaseStudy {
-  id: string;
-  title: string;
-  description: string;
-  tags: string[];
-  impact: string;
-  image: string;
-  year: string;
-}
-
-const caseStudies: CaseStudy[] = [
-  {
-    id: "01",
-    title: "Restoring Trust and Clarity in LinkedIn Conversations",
-    description:
-      "Examines the role of AI and identity in LinkedIn's messaging features, proposing designs that enhance user trust and clarity.",
-    tags: [
-      "Interface Design",
-      "Emotional UX",
-      "Information Architecture",
-      "UX Research",
-    ],
-    impact: "Improve user trust and clarity of identity in conversations",
-    image:
-      "https://images.metmuseum.org/CRDImages/ad/original/DP-25621-001.jpg",
-    year: "2025",
-  },
-];
+import { getAllCaseStudyMetadata } from "../utils/caseStudies";
 
 export function CaseStudiesPreview() {
+  // Get case studies synchronously from static data
+  const caseStudies = getAllCaseStudyMetadata();
+
   return (
     <section id="case-studies" className="py-20 bg-neutral-50">
       <div className="max-w-7xl mx-auto px-6">
@@ -53,7 +28,7 @@ export function CaseStudiesPreview() {
           {caseStudies.map((study) => (
             <Link
               key={study.id}
-              to={`/case-study/${study.id}`}
+              to={`/case-study/${study.slug}`}
               className="flex flex-col-reverse md:flex-row gap-6 border-t border-black/20 pt-12 group cursor-pointer"
               data-cursor="button"
             >
@@ -71,7 +46,9 @@ export function CaseStudiesPreview() {
                     <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
                       Impact
                     </div>
-                    <div className="text-black font-medium">{study.impact}</div>
+                    <div className="text-black font-medium">
+                      {study.impact || study.goal}
+                    </div>
                   </div>
 
                   <div className="flex flex-wrap gap-2">

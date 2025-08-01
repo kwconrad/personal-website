@@ -90,10 +90,12 @@ export function About() {
                 Philosophy
               </div>
               <div className="text-white leading-relaxed">
-                I believe in the power of design to solve complex problems and
-                create meaningful connections. My approach combines empathy,
-                creativity, and engineering expertise to provide solutions that
-                make sense for both users and the business.
+                I'm ruthless about simplicity. I'm bullish on designers as
+                problem solvers and believe combining design with context is a
+                superpower that will take us far into the FUTURE. I have a deep
+                understanding of technical constraints and limitations, and
+                focus on designing solutions that push the limits of what can be
+                done.
               </div>
             </div>
           </div>

@@ -62,7 +62,7 @@ export function CaseStudiesPreview() {
               {/* Image */}
               <div className="w-full md:w-1/3">
                 <div className="flex flex-col gap-1">
-                  <div className="aspect-[3/4] bg-black/5 overflow-hidden">
+                  <div className="aspect-[3/4] md:aspect-[4/3] bg-black/5 overflow-hidden">
                     <img
                       src={study.image}
                       alt={study.title}

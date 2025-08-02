@@ -61,12 +61,17 @@ export function CaseStudiesPreview() {
 
               {/* Image */}
               <div className="w-full md:w-1/3">
-                <div className="aspect-[3/4] bg-black/5 overflow-hidden">
-                  <img
-                    src={study.image}
-                    alt={study.title}
-                    className="w-full h-full object-cover scale-105 group-hover:scale-125 transition-transform"
-                  />
+                <div className="flex flex-col gap-1">
+                  <div className="aspect-[3/4] bg-black/5 overflow-hidden">
+                    <img
+                      src={study.image}
+                      alt={study.title}
+                      className="w-full h-full object-cover scale-105 group-hover:scale-125 transition-transform"
+                    />
+                  </div>
+                  <caption className="text-xs text-left text-neutral-700">
+                    {study.imageAttribution}
+                  </caption>
                 </div>
 
                 <div className="hidden md:flex items-center justify-between mt-4">

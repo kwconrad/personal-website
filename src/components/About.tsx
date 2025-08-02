@@ -56,9 +56,10 @@ export function About() {
           </div>
           <div className="col-span-12 md:col-span-8">
             <div className="text-lg md:text-xl text-white leading-relaxed">
-              Design Engineer with 8+ years working across design and frontend
-              engineering. I craft digital experiences that are both beautiful
-              and impactful, with a focus on measurable business outcomes.
+              Creative Design Engineer with 8 years background working across
+              design and frontend engineering. I craft digital experiences that
+              are both beautiful and impactful, with a focus on measurable
+              business outcomes.
             </div>
           </div>
         </div>
@@ -94,10 +95,9 @@ export function About() {
               </div>
               <div className="text-white leading-relaxed text-xl md:text-lg">
                 I try to take a subtractive approach to design, removing
-                friction points and enhancing usability. I believe simplicity
-                isn't a luxury; it's clarity. With a deep background in frontend
-                engineering, I design with constraints in mind and treat
-                limitations as creative tools.
+                friction points and enhancing usability. With a deep expertise
+                in frontend engineering, I design with constraints in mind and
+                treat limitations as creative tools.
               </div>
             </div>
           </div>

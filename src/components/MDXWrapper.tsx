@@ -15,6 +15,7 @@ interface MDXWrapperProps {
     year?: string;
     id?: string;
     image?: string;
+    imageAttribution?: string;
   };
 }
 
@@ -114,7 +115,7 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
           <div className="max-w-4xl mx-auto px-6">
             <div className="grid grid-cols-12 gap-6">
               {frontmatter.image && (
-                <div className="col-span-12">
+                <div className="col-span-12 flex flex-col gap-1">
                   <div className="aspect-[16/9] md:aspect-[18/6] bg-black/5 overflow-hidden border border-solid border-neutral-300">
                     <img
                       src={frontmatter.image}
@@ -122,6 +123,9 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
                       className="w-full h-full object-cover"
                     />
                   </div>
+                  <caption className="text-xs text-left text-neutral-700">
+                    {frontmatter.imageAttribution}
+                  </caption>
                 </div>
               )}
               <div className="col-span-12">
@@ -138,47 +142,49 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
                   )}
                 </div>
               </div>
-              {frontmatter.goal && (
-                <div className="col-span-6">
-                  <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
-                    Goal
+              <div className="py-4 grid grid-cols-12 gap-6">
+                {frontmatter.goal && (
+                  <div className="col-span-6">
+                    <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
+                      Goal
+                    </div>
+                    <div className="text-black font-medium">
+                      {frontmatter.goal}
+                    </div>
                   </div>
-                  <div className="text-black font-medium">
-                    {frontmatter.goal}
-                  </div>
+                )}
+                <div className="col-span-6 flex flex-col gap-6">
+                  {frontmatter.role && (
+                    <div className="col-span-6">
+                      <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
+                        Role
+                      </div>
+                      <div className="text-black font-medium">
+                        {frontmatter.role}
+                      </div>
+                    </div>
+                  )}
+                  {frontmatter.tools && (
+                    <div className="col-span-6">
+                      <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
+                        Tools
+                      </div>
+                      <div className="text-black font-medium">
+                        {frontmatter.tools.join(", ")}
+                      </div>
+                    </div>
+                  )}
+                  {frontmatter.techniques && (
+                    <div className="col-span-6">
+                      <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
+                        Techniques
+                      </div>
+                      <div className="text-black font-medium">
+                        {frontmatter.techniques.join(", ")}
+                      </div>
+                    </div>
+                  )}
                 </div>
-              )}
-              <div className="col-span-6 flex flex-col gap-6">
-                {frontmatter.role && (
-                  <div className="col-span-6">
-                    <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
-                      Role
-                    </div>
-                    <div className="text-black font-medium">
-                      {frontmatter.role}
-                    </div>
-                  </div>
-                )}
-                {frontmatter.tools && (
-                  <div className="col-span-6">
-                    <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
-                      Tools
-                    </div>
-                    <div className="text-black font-medium">
-                      {frontmatter.tools.join(", ")}
-                    </div>
-                  </div>
-                )}
-                {frontmatter.techniques && (
-                  <div className="col-span-6">
-                    <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
-                      Techniques
-                    </div>
-                    <div className="text-black font-medium">
-                      {frontmatter.techniques.join(", ")}
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           </div>

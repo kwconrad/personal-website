@@ -106,5 +106,6 @@ export interface CaseStudyMetadata {
   role?: string;
   goal?: string;
   image: string;
+  imageAttribution?: string;
   year: string;
 }

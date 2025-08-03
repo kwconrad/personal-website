@@ -1,0 +1,61 @@
+export const frontmatter = {
+  id: "02",
+  title: "Native Scheduled Messaging in WhatsApp",
+  overview:
+    "Explores the motivation behind having a scheduled messaging feature for individuals and businesses in WhatsApp",
+  role: "UX Engineer",
+  tools: ["Figma", "Visual Studio Code", "Pen&Paper"],
+  techniques: ["UX Research", "Rapid Prototyping", "UI Design"],
+  image: "/flowers-in-a-vase-vincent-van-gogh.jpg",
+  imageAttribution:
+    "Flowers in a Vase, by Vincent van Gogh, 1886 | Metropolitan Museum of Art",
+  year: "2025",
+};
+
+---
+
+### Overview
+
+> Despite WhatsApp’s nearly ubiquitous presence as a messaging platform, it currently lacks native support for scheduled messaging, a feature that has been requested by users who want to send messages at a future time. This case study explores both the design and development of a **native, end-to-end encrypted scheduled messaging feature** within WhatsApp.
+
+### Design Goals
+
+The goal is to:
+
+- Increase engagement with the app through new asynchronous communication use cases.
+- Provide support for neurodivergent users with memory issues (scheduled before forgetting)
+- Boost user retention for WhatsApp business by providing timed outreach to customers,
+- Support cross-timezone communication
+
+---
+
+### Technical considerations
+
+**Local vs. cloud storage:**
+
+- **Local storage** seems to intuitively be more private, as the data stays on the users device. However, it seems likely that this data could be erased if a user uninstalls and re-installs the app for example, leading to lost messages. That is a big enough issue to explore in this technical comparison
+- **Cloud storage** would be great because it would free up space on the users device, but the technical lift to encrypt and store scheduled messages in the cloud may be high.
+
+**Encryption Considerations:**
+
+- **Trust is key:** Any cloud storage must avoid plaintext messages and be fully end-to-end encrypted, to align with WhatsApps current model.
+- **Privacy:** end-to-end encryption techniques must be robust and flexible.
+- **Separation of concerns:** This feature should probably be separate from the core messaging and encryption system
+
+---
+
+### **Deliverables**
+
+- **UI Mockups** in Figma:
+  - Press-and-hold send button reveals "Schedule Message".
+  - Modal picker for date/time selection.
+  - Scheduled messages shown with a clock icon and edit/delete options in attachments panel.
+- **Prototypes**:
+  - Interactive flows for testing usability.
+  - Edge case handling: message editing, rescheduling, or device being offline.
+
+---
+
+### Research in progress
+
+This case study is still not finished. More to come, stay tuned!

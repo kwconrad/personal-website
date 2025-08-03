@@ -142,49 +142,49 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
                   )}
                 </div>
               </div>
-              <div className="py-4 grid grid-cols-12 gap-6">
-                {frontmatter.goal && (
+            </div>
+            <div className="py-4 grid grid-cols-12 gap-6">
+              {frontmatter.goal && (
+                <div className="col-span-6">
+                  <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
+                    Goal
+                  </div>
+                  <div className="text-black font-medium">
+                    {frontmatter.goal}
+                  </div>
+                </div>
+              )}
+              <div className="col-span-6 flex flex-col gap-6">
+                {frontmatter.role && (
                   <div className="col-span-6">
                     <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
-                      Goal
+                      Role
                     </div>
                     <div className="text-black font-medium">
-                      {frontmatter.goal}
+                      {frontmatter.role}
                     </div>
                   </div>
                 )}
-                <div className="col-span-6 flex flex-col gap-6">
-                  {frontmatter.role && (
-                    <div className="col-span-6">
-                      <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
-                        Role
-                      </div>
-                      <div className="text-black font-medium">
-                        {frontmatter.role}
-                      </div>
+                {frontmatter.tools && (
+                  <div className="col-span-6">
+                    <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
+                      Tools
                     </div>
-                  )}
-                  {frontmatter.tools && (
-                    <div className="col-span-6">
-                      <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
-                        Tools
-                      </div>
-                      <div className="text-black font-medium">
-                        {frontmatter.tools.join(", ")}
-                      </div>
+                    <div className="text-black font-medium">
+                      {frontmatter.tools.join(", ")}
                     </div>
-                  )}
-                  {frontmatter.techniques && (
-                    <div className="col-span-6">
-                      <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
-                        Techniques
-                      </div>
-                      <div className="text-black font-medium">
-                        {frontmatter.techniques.join(", ")}
-                      </div>
+                  </div>
+                )}
+                {frontmatter.techniques && (
+                  <div className="col-span-6">
+                    <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
+                      Techniques
                     </div>
-                  )}
-                </div>
+                    <div className="text-black font-medium">
+                      {frontmatter.techniques.join(", ")}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

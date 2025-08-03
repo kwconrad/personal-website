@@ -8,7 +8,7 @@ export function CaseStudiesPreview() {
 
   return (
     <section id="case-studies" className="bg-neutral-50">
-      <div className="max-w-7xl mx-auto px-6 pb-20">
+      <div className="max-w-4xl mx-auto px-6 pb-20">
         {/* Header */}
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 md:col-span-8">
@@ -28,7 +28,7 @@ export function CaseStudiesPreview() {
               data-cursor="button"
             >
               {/* Project Info */}
-              <div className="w-full md:w-2/3 flex flex-col gap-3">
+              <div className="w-full md:w-1/2 flex flex-col gap-3">
                 <div className="flex flex-col">
                   <h3 className="text-3xl font-black group-hover:text-black mb-4 text-black/80 transition-colors">
                     {study.title}
@@ -60,7 +60,7 @@ export function CaseStudiesPreview() {
               </div>
 
               {/* Image */}
-              <div className="w-full md:w-1/3">
+              <div className="w-full md:w-1/2">
                 <div className="flex flex-col gap-1">
                   <div className="aspect-[3/4] md:aspect-[4/3] bg-black/5 overflow-hidden">
                     <img

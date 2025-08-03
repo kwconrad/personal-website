@@ -46,7 +46,7 @@ const experience = [
 export function About() {
   return (
     <section id="about" className="py-20 bg-black border-t border-white/20">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 md:col-span-4">

@@ -3,7 +3,7 @@ import { scrollToSection } from "@/lib/utils";
 export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur">
-      <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto h-16 items-center px-6">
+      <div className="grid grid-cols-12 gap-6 max-w-4xl mx-auto h-16 items-center px-6">
         <div className="col-span-6 flex items-center">
           <div className="flex gap-2 items-center">
             <span

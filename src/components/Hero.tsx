@@ -4,7 +4,7 @@ import { ArrowDown } from "lucide-react";
 export function Hero() {
   return (
     <section className="min-h-screen bg-neutral-50 relative">
-      <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto px-6 h-screen">
+      <div className="grid grid-cols-12 gap-6 max-w-4xl mx-auto px-6 h-screen">
         <div className="col-span-12 flex flex-col justify-center">
           <div className="space-y-8">
             <div>
@@ -16,7 +16,7 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
               <div>
                 <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
                   Discipline

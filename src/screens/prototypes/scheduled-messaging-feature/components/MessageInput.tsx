@@ -1,17 +1,31 @@
-import React, { useState, useRef } from 'react';
-import { Send, Smile, Paperclip, Camera, Mic, MoreHorizontal } from 'lucide-react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
-import { SchedulePopover } from './SchedulePopover';
+import React, { useState, useRef } from "react";
+import {
+  Send,
+  Smile,
+  Paperclip,
+  Camera,
+  Mic,
+  MoreHorizontal,
+} from "lucide-react";
+import { Button } from "../../../../components/ui/button";
+import { Input } from "../../../../components/ui/input";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "../../../../components/ui/popover";
+import { SchedulePopover } from "./SchedulePopover";
 
 interface MessageInputProps {
   onSendMessage: (text: string) => void;
   onSchedulePress: (text: string, scheduledFor: Date) => void;
 }
 
-export function MessageInput({ onSendMessage, onSchedulePress }: MessageInputProps) {
-  const [message, setMessage] = useState('');
+export function MessageInput({
+  onSendMessage,
+  onSchedulePress,
+}: MessageInputProps) {
+  const [message, setMessage] = useState("");
   const [showSchedulePopover, setShowSchedulePopover] = useState(false);
   const longPressTimer = useRef<NodeJS.Timeout | null>(null);
   const [isLongPressing, setIsLongPressing] = useState(false);
@@ -19,7 +33,7 @@ export function MessageInput({ onSendMessage, onSchedulePress }: MessageInputPro
   const handleSendPress = () => {
     if (message.trim()) {
       onSendMessage(message.trim());
-      setMessage('');
+      setMessage("");
     }
   };
 
@@ -38,12 +52,12 @@ export function MessageInput({ onSendMessage, onSchedulePress }: MessageInputPro
       clearTimeout(longPressTimer.current);
       longPressTimer.current = null;
     }
-    
+
     // Only send message if it wasn't a long press and we have text
     if (!isLongPressing && message.trim()) {
       handleSendPress();
     }
-    
+
     setIsLongPressing(false);
   };
 
@@ -56,7 +70,7 @@ export function MessageInput({ onSendMessage, onSchedulePress }: MessageInputPro
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSendPress();
     }
@@ -66,7 +80,7 @@ export function MessageInput({ onSendMessage, onSchedulePress }: MessageInputPro
     if (message.trim()) {
       onSchedulePress(message.trim(), scheduledFor);
       setShowSchedulePopover(false);
-      setMessage('');
+      setMessage("");
     }
   };
 
@@ -74,19 +88,39 @@ export function MessageInput({ onSendMessage, onSchedulePress }: MessageInputPro
     <div className="p-4 bg-black border-t border-gray-800">
       {/* Toolbar */}
       <div className="flex items-center justify-center gap-6 mb-4">
-        <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white hover:bg-gray-800">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="text-gray-400 hover:text-white hover:bg-gray-800"
+        >
           <Smile className="h-5 w-5" />
         </Button>
-        <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white hover:bg-gray-800">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="text-gray-400 hover:text-white hover:bg-gray-800"
+        >
           <Paperclip className="h-5 w-5" />
         </Button>
-        <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white hover:bg-gray-800">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="text-gray-400 hover:text-white hover:bg-gray-800"
+        >
           <Camera className="h-5 w-5" />
         </Button>
-        <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white hover:bg-gray-800">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="text-gray-400 hover:text-white hover:bg-gray-800"
+        >
           <Mic className="h-5 w-5" />
         </Button>
-        <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white hover:bg-gray-800">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="text-gray-400 hover:text-white hover:bg-gray-800"
+        >
           <MoreHorizontal className="h-5 w-5" />
         </Button>
       </div>
@@ -103,8 +137,11 @@ export function MessageInput({ onSendMessage, onSchedulePress }: MessageInputPro
             className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 rounded-full pr-12"
           />
         </div>
-        
-        <Popover open={showSchedulePopover} onOpenChange={setShowSchedulePopover}>
+
+        <Popover
+          open={showSchedulePopover}
+          onOpenChange={setShowSchedulePopover}
+        >
           <PopoverTrigger asChild>
             <Button
               size="icon"
@@ -120,9 +157,9 @@ export function MessageInput({ onSendMessage, onSchedulePress }: MessageInputPro
               <Send className="h-4 w-4" />
             </Button>
           </PopoverTrigger>
-          
-          <PopoverContent 
-            side="top" 
+
+          <PopoverContent
+            side="top"
             align="end"
             className="w-80 p-0 bg-gray-900 border-gray-700 text-white"
             sideOffset={8}

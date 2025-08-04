@@ -2,7 +2,7 @@ import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { clsx } from "clsx";
 
-import { cn } from "./utils";
+import { cn } from "../../screens/prototypes/scheduled-messaging-feature/components/ui/utils";
 
 interface BadgeProps {
   variant?: "default" | "secondary" | "destructive" | "outline";

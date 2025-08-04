@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Button } from './ui/button';
-import { Clock, Calendar } from 'lucide-react';
-import { DateTimePicker } from './DateTimePicker';
+import React, { useState } from "react";
+import { Button } from "../../../../components/ui/button";
+import { Clock, Calendar } from "lucide-react";
+import { DateTimePicker } from "./DateTimePicker";
 
 interface SchedulePopoverProps {
   messageText: string;
@@ -9,7 +9,11 @@ interface SchedulePopoverProps {
   onClose: () => void;
 }
 
-export function SchedulePopover({ messageText, onConfirm, onClose }: SchedulePopoverProps) {
+export function SchedulePopover({
+  messageText,
+  onConfirm,
+  onClose,
+}: SchedulePopoverProps) {
   const [showCustomPicker, setShowCustomPicker] = useState(false);
 
   const getScheduledTime = (minutes: number) => {
@@ -31,18 +35,20 @@ export function SchedulePopover({ messageText, onConfirm, onClose }: SchedulePop
 
   const formatTime = (minutes: number) => {
     const date = getScheduledTime(minutes);
-    return date.toLocaleTimeString('en-US', { 
-      hour: 'numeric', 
-      minute: '2-digit',
-      hour12: true 
+    return date.toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
     });
   };
 
   return (
     <>
       <div className="p-4 space-y-4">
-        <div className="text-sm text-gray-200 font-medium">Schedule Message</div>
-        
+        <div className="text-sm text-gray-200 font-medium">
+          Schedule Message
+        </div>
+
         <div className="bg-gray-800 rounded-lg p-3 text-sm text-gray-300">
           "{messageText}"
         </div>
@@ -81,11 +87,11 @@ export function SchedulePopover({ messageText, onConfirm, onClose }: SchedulePop
             <div>
               <div className="font-medium">1 day</div>
               <div className="text-xs text-gray-400">
-                {getScheduledTime(24 * 60).toLocaleDateString('en-US', { 
-                  month: 'short', 
-                  day: 'numeric',
-                  hour: 'numeric',
-                  minute: '2-digit'
+                {getScheduledTime(24 * 60).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  hour: "numeric",
+                  minute: "2-digit",
                 })}
               </div>
             </div>
@@ -99,7 +105,9 @@ export function SchedulePopover({ messageText, onConfirm, onClose }: SchedulePop
             <Calendar className="h-4 w-4 text-blue-400" />
             <div>
               <div className="font-medium">Custom</div>
-              <div className="text-xs text-gray-400">Choose specific date & time</div>
+              <div className="text-xs text-gray-400">
+                Choose specific date & time
+              </div>
             </div>
           </Button>
         </div>

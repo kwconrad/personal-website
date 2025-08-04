@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle } from "./ui/sheet";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from "../../../../components/ui/sheet";
+import { Button } from "../../../../components/ui/button";
+import { Badge } from "../../../../components/ui/badge";
 import { Clock, Edit2, Trash2, X } from "lucide-react";
 import { ScheduledMessage } from "..";
 import { EditScheduledMessageModal } from "./EditScheduledMessageModal";

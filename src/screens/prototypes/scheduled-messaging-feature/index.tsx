@@ -135,14 +135,15 @@ export default function ScheduledMessagingPrototype() {
 
         {/* Scheduled Messages Icon */}
         {scheduledMessages.length > 0 && (
-          <div className="flex justify-center py-2">
+          <div className="m-2 bg-neutral-800 flex justify-center py-2 rounded-md">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setShowScheduledPanel(true)}
-              className="text-blue-400 hover:bg-gray-800 rounded-full"
+              className="text-neutral-300 hover:bg-gray-800 rounded-full flex gap-2"
             >
               <Clock className="h-4 w-4" />
+              <span>Scheduled messages</span>
             </Button>
           </div>
         )}

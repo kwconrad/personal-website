@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
-import { clsx } from "clsx";
+import { cn } from "./utils";
 
 interface ButtonProps {
   variant?:
@@ -41,7 +41,7 @@ const getButtonClasses = ({
     icon: "w-8 h-8 rounded-full", // Adjusted for icon buttons
   };
 
-  return clsx(baseClasses, variantClasses[variant], sizeClasses[size]);
+  return cn(baseClasses, variantClasses[variant], sizeClasses[size]);
 };
 
 const Button = React.forwardRef<
@@ -51,7 +51,7 @@ const Button = React.forwardRef<
   const Comp = asChild ? Slot : "button";
   return (
     <Comp
-      className={clsx(getButtonClasses({ variant, size }), className)}
+      className={cn(getButtonClasses({ variant, size }), className)}
       ref={ref}
       {...props}
     />

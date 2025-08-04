@@ -145,6 +145,7 @@ export function MessageInput({
           <PopoverTrigger asChild>
             <Button
               size="icon"
+              className="bg-green-600 hover:bg-green-700 rounded-full"
               disabled={!message.trim()}
               onMouseDown={startLongPress}
               onMouseUp={endLongPress}

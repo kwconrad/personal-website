@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import {
   Send,
   Smile,
@@ -7,13 +7,13 @@ import {
   Mic,
   MoreHorizontal,
 } from "lucide-react";
-import { Button } from "../../../../components/ui/button";
-import { Input } from "../../../../components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "../../../../components/ui/popover";
+} from "@/components/ui/popover";
 import { SchedulePopover } from "./SchedulePopover";
 
 interface MessageInputProps {
@@ -27,7 +27,7 @@ export function MessageInput({
 }: MessageInputProps) {
   const [message, setMessage] = useState("");
   const [showSchedulePopover, setShowSchedulePopover] = useState(false);
-  const longPressTimer = useRef<NodeJS.Timeout | null>(null);
+  const longPressTimer = useRef<number | null>(null);
   const [isLongPressing, setIsLongPressing] = useState(false);
 
   const handleSendPress = () => {

@@ -3,7 +3,7 @@ import { MessageThread } from "./components/MessageThread";
 import { MessageInput } from "./components/MessageInput";
 import { ScheduledMessagesPanel } from "./components/ScheduledMessagesPanel";
 import { ArrowLeft, MoreVertical, Clock } from "lucide-react";
-import { Button } from "../../../components/ui/button";
+import { Button } from "@/components/ui/button";
 
 export interface Message {
   id: string;

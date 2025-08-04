@@ -2,8 +2,6 @@ import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { clsx } from "clsx";
 
-import { cn } from "../../screens/prototypes/scheduled-messaging-feature/components/ui/utils";
-
 interface BadgeProps {
   variant?: "default" | "secondary" | "destructive" | "outline";
   asChild?: boolean;
@@ -35,7 +33,7 @@ function Badge({
 }: React.ComponentProps<"span"> & BadgeProps) {
   const Comp = asChild ? Slot : "span";
   return (
-    <Comp className={cn(getBadgeClasses({ variant }), className)} {...props} />
+    <Comp className={clsx(getBadgeClasses({ variant }), className)} {...props} />
   );
 }
 

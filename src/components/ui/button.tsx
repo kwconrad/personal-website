@@ -2,8 +2,6 @@ import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { clsx } from "clsx";
 
-import { cn } from "../../screens/prototypes/scheduled-messaging-feature/components/ui/utils";
-
 interface ButtonProps {
   variant?:
     | "default"
@@ -52,7 +50,7 @@ const Button = React.forwardRef<
   const Comp = asChild ? Slot : "button";
   return (
     <Comp
-      className={cn(getButtonClasses({ variant, size }), className)}
+      className={clsx(getButtonClasses({ variant, size }), className)}
       ref={ref}
       {...props}
     />

@@ -2,8 +2,7 @@
 
 import * as React from "react";
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
-
-import { cn } from "../../screens/prototypes/scheduled-messaging-feature/components/ui/utils";
+import { clsx } from "clsx";
 
 function ScrollArea({
   className,
@@ -13,7 +12,7 @@ function ScrollArea({
   return (
     <ScrollAreaPrimitive.Root
       data-slot="scroll-area"
-      className={cn("relative", className)}
+      className={clsx("relative", className)}
       {...props}
     >
       <ScrollAreaPrimitive.Viewport
@@ -37,7 +36,7 @@ function ScrollBar({
     <ScrollAreaPrimitive.ScrollAreaScrollbar
       data-slot="scroll-area-scrollbar"
       orientation={orientation}
-      className={cn(
+      className={clsx(
         "flex touch-none p-px transition-colors select-none",
         orientation === "vertical" &&
           "h-full w-2.5 border-l border-l-transparent",

@@ -86,45 +86,6 @@ export function MessageInput({
 
   return (
     <div className="p-4 bg-black border-t border-gray-800">
-      {/* Toolbar */}
-      <div className="flex items-center justify-center gap-6 mb-4">
-        <Button
-          variant="ghost"
-          size="icon"
-          className="text-gray-400 hover:text-white hover:bg-gray-800"
-        >
-          <Smile className="h-5 w-5" />
-        </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="text-gray-400 hover:text-white hover:bg-gray-800"
-        >
-          <Paperclip className="h-5 w-5" />
-        </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="text-gray-400 hover:text-white hover:bg-gray-800"
-        >
-          <Camera className="h-5 w-5" />
-        </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="text-gray-400 hover:text-white hover:bg-gray-800"
-        >
-          <Mic className="h-5 w-5" />
-        </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="text-gray-400 hover:text-white hover:bg-gray-800"
-        >
-          <MoreHorizontal className="h-5 w-5" />
-        </Button>
-      </div>
-
       {/* Message Input */}
       <div className="flex items-center gap-3">
         <Smile className="h-5 w-5 text-gray-400" />

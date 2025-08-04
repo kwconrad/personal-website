@@ -73,10 +73,10 @@ export function EditScheduledMessageModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md bg-gray-900 border-gray-700 text-white">
+      <DialogContent className="sm:max-w-md bg-neutral-900 border-neutral-700 text-white">
         <DialogHeader>
           <DialogTitle>Edit Scheduled Message</DialogTitle>
-          <DialogDescription className="text-gray-400">
+          <DialogDescription className="text-neutral-400">
             Modify the message content and scheduled time
           </DialogDescription>
         </DialogHeader>
@@ -91,7 +91,7 @@ export function EditScheduledMessageModal({
               value={editedText}
               onChange={(e) => setEditedText(e.target.value)}
               placeholder="Enter your message..."
-              className="mt-1 bg-gray-800 border-gray-700 text-white resize-none"
+              className="mt-1 bg-neutral-800 border-neutral-700 text-white resize-none"
               rows={3}
             />
           </div>
@@ -107,7 +107,7 @@ export function EditScheduledMessageModal({
                 value={editedDate}
                 onChange={(e) => setEditedDate(e.target.value)}
                 min={new Date().toISOString().split("T")[0]}
-                className="mt-1 bg-gray-800 border-gray-700 text-white"
+                className="mt-1 bg-neutral-800 border-neutral-700 text-white"
               />
             </div>
 
@@ -120,13 +120,13 @@ export function EditScheduledMessageModal({
                 type="time"
                 value={editedTime}
                 onChange={(e) => setEditedTime(e.target.value)}
-                className="mt-1 bg-gray-800 border-gray-700 text-white"
+                className="mt-1 bg-neutral-800 border-neutral-700 text-white"
               />
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-3">
-            <div className="text-xs text-gray-400 mb-1">
+          <div className="bg-neutral-800 rounded-lg p-3">
+            <div className="text-xs text-neutral-400 mb-1">
               Message will be sent:
             </div>
             <div className="text-sm font-medium">{formatPreview()}</div>
@@ -137,14 +137,11 @@ export function EditScheduledMessageModal({
           <Button
             variant="outline"
             onClick={onClose}
-            className="border-gray-700 text-gray-300 hover:bg-gray-800"
+            className="border-neutral-700 text-neutral-300 rounded-sm"
           >
             Cancel
           </Button>
-          <Button
-            onClick={handleConfirm}
-            className="bg-blue-600 hover:bg-blue-700"
-          >
+          <Button onClick={handleConfirm} className="rounded-sm bg-green-600">
             Update
           </Button>
         </DialogFooter>

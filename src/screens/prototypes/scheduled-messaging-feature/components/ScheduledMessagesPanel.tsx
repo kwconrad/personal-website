@@ -83,16 +83,16 @@ export function ScheduledMessagesPanel({
       <Sheet open={isOpen} onOpenChange={onClose}>
         <SheetContent
           side="bottom"
-          className="bg-gray-900 border-gray-700 text-white h-[70vh]"
+          className="bg-neutral-900 border-neutral-700 text-white h-[70vh]"
         >
           <SheetHeader>
             <SheetTitle className="flex items-center justify-between text-white">
               <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5 text-blue-400" />
+                <Clock className="h-5 w-5 text-neutral-400" />
                 <span>Scheduled Messages</span>
                 <Badge
                   variant="secondary"
-                  className="bg-gray-700 text-gray-300"
+                  className="bg-neutral-700 text-neutral-300"
                 >
                   {scheduledMessages.length}
                 </Badge>
@@ -103,9 +103,9 @@ export function ScheduledMessagesPanel({
             </SheetTitle>
           </SheetHeader>
 
-          <div className="mt-6 space-y-3 overflow-y-auto max-h-[50vh]">
+          <div className="space-y-3 overflow-y-auto max-h-[50vh]">
             {sortedMessages.length === 0 ? (
-              <div className="text-center py-8 text-gray-400">
+              <div className="text-center py-8 text-neutral-400">
                 <Clock className="h-12 w-12 mx-auto mb-3 opacity-50" />
                 <p>No scheduled messages</p>
                 <p className="text-sm">
@@ -116,7 +116,7 @@ export function ScheduledMessagesPanel({
               sortedMessages.map((message) => (
                 <div
                   key={message.id}
-                  className="bg-gray-800 rounded-lg p-4 space-y-3"
+                  className="bg-neutral-800 rounded-t-lg p-4 space-y-3"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -124,11 +124,11 @@ export function ScheduledMessagesPanel({
                       <div className="flex items-center gap-2">
                         <Badge
                           variant="outline"
-                          className="border-blue-400 text-blue-400 text-xs"
+                          className="border-neutral-400 text-neutral-200 text-xs"
                         >
                           {formatScheduledTime(message.scheduledFor)}
                         </Badge>
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-neutral-100">
                           {formatExactTime(message.scheduledFor)}
                         </span>
                       </div>
@@ -140,7 +140,7 @@ export function ScheduledMessagesPanel({
                       variant="ghost"
                       size="sm"
                       onClick={() => handleEdit(message)}
-                      className="text-blue-400 hover:bg-gray-700 h-8"
+                      className="text-neutral-400 hover:bg-neutral-700 h-8"
                     >
                       <Edit2 className="h-3 w-3 mr-1" />
                       Edit
@@ -149,7 +149,7 @@ export function ScheduledMessagesPanel({
                       variant="ghost"
                       size="sm"
                       onClick={() => onDelete(message.id)}
-                      className="text-red-400 hover:bg-gray-700 h-8"
+                      className="text-red-400 hover:bg-neutral-700 h-8"
                     >
                       <Trash2 className="h-3 w-3 mr-1" />
                       Delete

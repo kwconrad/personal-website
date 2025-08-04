@@ -5,6 +5,7 @@ import { About } from "./components/About";
 import { Footer } from "./components/Footer";
 import { CaseStudyDetail } from "./components/CaseStudyDetail";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScheduledMessagingPrototype from "./screens/prototypes/scheduled-messaging-feature";
 // import { Contact } from "./components/Contact";
 
 function HomePage() {
@@ -27,6 +28,10 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/case-study/:slug" element={<CaseStudyDetail />} />
+          <Route
+            path="/prototypes/scheduled-messaging"
+            element={<ScheduledMessagingPrototype />}
+          />
         </Routes>
       </div>
     </Router>

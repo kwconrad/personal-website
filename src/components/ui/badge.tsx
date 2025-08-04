@@ -33,7 +33,10 @@ function Badge({
 }: React.ComponentProps<"span"> & BadgeProps) {
   const Comp = asChild ? Slot : "span";
   return (
-    <Comp className={clsx(getBadgeClasses({ variant }), className)} {...props} />
+    <Comp
+      className={clsx(getBadgeClasses({ variant }), className)}
+      {...props}
+    />
   );
 }
 

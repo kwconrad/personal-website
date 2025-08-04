@@ -4,6 +4,7 @@ import { MessageInput } from "./components/MessageInput";
 import { ScheduledMessagesPanel } from "./components/ScheduledMessagesPanel";
 import { ArrowLeft, MoreVertical, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export interface Message {
   id: string;
@@ -103,13 +104,15 @@ export default function ScheduledMessagingPrototype() {
         {/* Header */}
         <div className="flex items-center justify-between p-4 bg-black border-b border-gray-800">
           <div className="flex items-center gap-3">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-white hover:bg-gray-800"
-            >
-              <ArrowLeft className="h-5 w-5" />
-            </Button>
+            <Link to="/case-study/native-scheduled-messaging-in-whatsapp">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-white hover:bg-gray-800"
+              >
+                <ArrowLeft className="h-5 w-5" />
+              </Button>
+            </Link>
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-gradient-to-br bg-purple-500 rounded-full flex items-center justify-center">
                 <span className="text-sm font-medium">M</span>

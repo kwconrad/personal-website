@@ -6,7 +6,6 @@ import { Footer } from "./components/Footer";
 import { CaseStudyDetail } from "./components/CaseStudyDetail";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScheduledMessagingPrototype from "./screens/prototypes/scheduled-messaging-feature";
-// import { Contact } from "./components/Contact";
 
 function HomePage() {
   return (
@@ -15,7 +14,6 @@ function HomePage() {
       <Hero />
       <CaseStudiesPreview />
       <About />
-      {/* <Contact /> */}
       <Footer />
     </>
   );

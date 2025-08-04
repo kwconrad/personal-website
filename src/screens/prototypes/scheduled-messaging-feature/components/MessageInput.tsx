@@ -2,10 +2,6 @@ import { useState, useRef } from "react";
 import {
   Send,
   Smile,
-  Paperclip,
-  Camera,
-  Mic,
-  MoreHorizontal,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

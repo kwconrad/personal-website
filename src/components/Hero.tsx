@@ -8,10 +8,10 @@ export function Hero() {
         <div className="col-span-12 flex flex-col justify-center">
           <div className="space-y-8">
             <div>
-              <div className="text-5xl md:text-7xl leading-none font-black text-black tracking-tighter">
+              <div className="text-5xl md:text-7xl leading-none font-serif text-black tracking-tighter">
                 Kyle Conrad,
               </div>
-              <div className="text-5xl md:text-7xl leading-none font-black text-black tracking-tighter">
+              <div className="text-5xl md:text-7xl leading-none font-serif text-black tracking-tighter">
                 Design Engineer
               </div>
             </div>

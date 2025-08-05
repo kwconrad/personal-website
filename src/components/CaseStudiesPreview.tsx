@@ -12,7 +12,7 @@ export function CaseStudiesPreview() {
         {/* Header */}
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 md:col-span-8">
-            <h2 className="text-5xl md:text-7xl font-black text-black tracking-tighter leading-none">
+            <h2 className="text-5xl font-serif md:text-7xl text-black tracking-tighter leading-none">
               Case Studies
             </h2>
           </div>
@@ -30,7 +30,7 @@ export function CaseStudiesPreview() {
               {/* Project Info */}
               <div className="w-full md:w-1/2 flex flex-col gap-3">
                 <div className="flex flex-col">
-                  <h3 className="text-3xl font-black group-hover:text-black mb-4 text-black/80 transition-colors">
+                  <h3 className="font-serif text-3xl group-hover:text-black mb-4 text-black/80 transition-colors">
                     {study.title}
                   </h3>
                   <p className="text-black/80 mb-6 text-lg leading-relaxed">

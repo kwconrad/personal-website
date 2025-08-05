@@ -50,7 +50,7 @@ export function About() {
         {/* Header */}
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 md:col-span-4">
-            <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
+            <h2 className="font-serif text-5xl md:text-7xl text-white tracking-tighter leading-none">
               About
             </h2>
           </div>

@@ -131,7 +131,7 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
               <div className="col-span-12">
                 <div className="space-y-4">
                   {frontmatter.title && (
-                    <h1 className="text-4xl font-bold text-black">
+                    <h1 className="font-serif text-4xl text-black">
                       {frontmatter.title}
                     </h1>
                   )}

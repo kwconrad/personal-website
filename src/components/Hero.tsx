@@ -19,12 +19,17 @@ export function Hero() {
           <div className="space-y-8">
             <div>
               <h1 className="text-4xl md:text-6xl leading-[1.12] font-serif text-black tracking-tighter">
-                Human-centric Design Engineer passionate about helping
-                businesses solve user problems
+                Focused on crafting user-centric digital experiences that make
+                peoples lives easier.
               </h1>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
+            <motion.div
+              animate={{
+                opacity: isVisible ? 1 : 0,
+              }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8"
+            >
               <div>
                 <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
                   Discipline
@@ -46,7 +51,7 @@ export function Hero() {
                   experiences
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 

@@ -2,6 +2,7 @@ import { scrollToSection } from "@/lib/utils";
 import { ArrowDown } from "lucide-react";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useState } from "react";
+import { AnimatedEmoji } from "./AnimatedEmoji";
 
 export function Hero() {
   const { scrollY } = useScroll();
@@ -19,6 +20,7 @@ export function Hero() {
           <div className="space-y-8">
             <div>
               <h1 className="text-4xl md:text-6xl leading-[1.12] font-serif text-black tracking-tighter">
+                <span className="animate-pulse pr-2">🟠</span>
                 Focused on crafting user-centric digital experiences that make
                 peoples lives easier.
               </h1>

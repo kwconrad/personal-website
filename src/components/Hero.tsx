@@ -9,51 +9,49 @@ export function Hero() {
 
   // Hide arrow when scrolled past 50% of viewport height
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setIsVisible(latest < window.innerHeight * 0.5);
+    setIsVisible(latest < window.innerHeight * 0.65);
   });
 
   return (
     <section className="min-h-screen bg-neutral-50 relative">
       <div className="grid grid-cols-12 gap-6 max-w-4xl mx-auto px-6 h-screen">
-        <div className="col-span-12 flex flex-col justify-center">
-          <div className="space-y-8">
-            <div>
-              <h1 className="text-4xl md:text-6xl leading-[1.12] font-serif text-black tracking-tighter">
-                <span className="animate-pulse pr-2">🟠</span>
-                Focused on crafting user-centric digital experiences that make
-                peoples lives easier.
-              </h1>
-            </div>
-
-            <motion.div
-              animate={{
-                opacity: isVisible ? 1 : 0,
-              }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8"
-            >
-              <div>
-                <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
-                  Discipline
-                </div>
-                <div className="text-lg text-black">
-                  Digital Product Design
-                  <br />
-                  Frontend Engineering
-                  <br />
-                  Design Systems
-                </div>
-              </div>
-              <div>
-                <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
-                  Focus
-                </div>
-                <div className="text-lg text-black">
-                  Crafting intuitive, user-centered, and immersive digital
-                  experiences
-                </div>
-              </div>
-            </motion.div>
+        <div className="col-span-12 flex flex-col gap-8 justify-center">
+          <div className="mb-0 md:mb-4">
+            <h1 className="text-4xl md:text-6xl leading-[1.12] font-serif text-black tracking-tighter">
+              <span className="animate-pulse pr-2">🟠</span>
+              Focused on crafting digital experiences that make peoples lives
+              easier.
+            </h1>
           </div>
+
+          <motion.div
+            animate={{
+              opacity: isVisible ? 1 : 0,
+            }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0"
+          >
+            <div>
+              <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
+                Discipline
+              </div>
+              <div className="text-lg text-black">
+                Digital Product Design
+                <br />
+                Frontend Engineering
+                <br />
+                Design Systems
+              </div>
+            </div>
+            <div>
+              <div className="text-sm uppercase tracking-wider text-black/60 mb-2">
+                Focus
+              </div>
+              <div className="text-lg text-black">
+                Crafting intuitive, user-centered, and immersive digital
+                experiences
+              </div>
+            </div>
+          </motion.div>
         </div>
 
         {/* Bottom arrow */}

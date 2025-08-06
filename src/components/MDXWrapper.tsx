@@ -143,7 +143,7 @@ export function MDXWrapper({ children, frontmatter }: MDXWrapperProps) {
                 </div>
               </div>
             </div>
-            <div className="py-4 grid grid-cols-12 gap-6">
+            <div className="pt-8 grid grid-cols-12 gap-6">
               {frontmatter.goal && (
                 <div className="col-span-6">
                   <div className="text-sm tracking-wider uppercase text-black/60 mb-1">

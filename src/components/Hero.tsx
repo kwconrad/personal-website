@@ -1,7 +1,17 @@
 import { scrollToSection } from "@/lib/utils";
 import { ArrowDown } from "lucide-react";
+import { motion, useScroll, useMotionValueEvent } from "motion/react";
+import { useState } from "react";
 
 export function Hero() {
+  const { scrollY } = useScroll();
+  const [isVisible, setIsVisible] = useState(true);
+
+  // Hide arrow when scrolled past 50% of viewport height
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsVisible(latest < window.innerHeight * 0.5);
+  });
+
   return (
     <section className="min-h-screen bg-neutral-50 relative">
       <div className="grid grid-cols-12 gap-6 max-w-4xl mx-auto px-6 h-screen">
@@ -41,12 +51,18 @@ export function Hero() {
         </div>
 
         {/* Bottom arrow */}
-        <div
+        <motion.div
           onClick={() => scrollToSection("case-studies")}
-          className="hidden col-span-12 md:flex justify-center absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="hidden col-span-12 md:flex justify-center absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
+          animate={{
+            opacity: isVisible ? 1 : 0,
+            scale: isVisible ? 1 : 0.8,
+            y: isVisible ? 0 : 10,
+          }}
+          transition={{ duration: 0.3 }}
         >
           <ArrowDown className="w-6 h-6 text-black animate-bounce" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

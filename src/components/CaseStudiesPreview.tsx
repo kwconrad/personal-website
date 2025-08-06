@@ -10,7 +10,7 @@ export function CaseStudiesPreview() {
     <section id="case-studies" className="bg-neutral-50">
       <div className="max-w-4xl mx-auto px-6 pb-20">
         {/* Header */}
-        <div className="grid grid-cols-12 gap-6 mb-16">
+        <div className="grid grid-cols-12 gap-6 mb-8">
           <div className="col-span-12 md:col-span-8">
             <h2 className="text-5xl font-serif md:text-7xl text-black tracking-tighter leading-none">
               Case Studies

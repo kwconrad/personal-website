@@ -21,7 +21,7 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui"],
-        serif: ["Instrument Serif", "ui-serif", "Georgia"],
+        serif: ["Domine", "ui-serif", "Georgia"],
       },
       colors: {
         yellow: "hsl(var(--yellow))",

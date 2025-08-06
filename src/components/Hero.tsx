@@ -2,7 +2,6 @@ import { scrollToSection } from "@/lib/utils";
 import { ArrowDown } from "lucide-react";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useState } from "react";
-import { AnimatedEmoji } from "./AnimatedEmoji";
 
 export function Hero() {
   const { scrollY } = useScroll();

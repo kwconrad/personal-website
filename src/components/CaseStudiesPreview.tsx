@@ -63,7 +63,7 @@ export function CaseStudiesPreview() {
                     />
                   </div>
                   <div className="px-0.5 flex">
-                    <caption className="text-[11px] text-left text-neutral-400">
+                    <caption className="text-[10px] text-left text-neutral-400">
                       {study.imageAttribution}
                     </caption>
                   </div>

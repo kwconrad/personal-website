@@ -5,12 +5,18 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur">
       <div className="grid grid-cols-12 gap-6 max-w-4xl mx-auto h-16 items-center px-6">
         <div className="col-span-6 flex items-center">
-          <div className="flex gap-2 items-center">
+          <div className="flex flex-col -space-y-2">
             <span
               className="text-black font-sans font-medium"
               data-cursor="text"
             >
               Kyle Conrad
+            </span>
+            <span
+              className="text-neutral-600 font-sans font-medium"
+              data-cursor="text"
+            >
+              Design Engineer
             </span>
           </div>
         </div>

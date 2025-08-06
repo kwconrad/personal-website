@@ -28,7 +28,7 @@ export function CaseStudiesPreview() {
               data-cursor="button"
             >
               {/* Project Info */}
-              <div className="w-full md:w-1/2 flex flex-col gap-3">
+              <div className="w-full md:w-1/2 flex flex-col justify-between">
                 <div className="flex flex-col">
                   <h3 className="font-serif text-3xl group-hover:text-black mb-4 text-black/80 transition-colors">
                     {study.title}
@@ -39,13 +39,6 @@ export function CaseStudiesPreview() {
                 </div>
 
                 <div className="flex flex-col gap-4">
-                  <div>
-                    <div className="text-sm tracking-wider uppercase text-black/60 mb-1">
-                      Goal
-                    </div>
-                    <div className="text-black font-medium">{study.goal}</div>
-                  </div>
-
                   <div className="flex flex-wrap gap-2">
                     {study.techniques.map((tag) => (
                       <span
@@ -62,16 +55,18 @@ export function CaseStudiesPreview() {
               {/* Image */}
               <div className="w-full md:w-1/2">
                 <div className="flex flex-col gap-1">
-                  <div className="aspect-[3/4] md:aspect-[4/3] bg-black/5 overflow-hidden">
+                  <div className="aspect-[16/9] bg-black/5 overflow-hidden">
                     <img
                       src={study.image}
                       alt={study.title}
                       className="w-full h-full object-cover scale-105 group-hover:scale-125 transition-transform"
                     />
                   </div>
-                  <caption className="text-xs text-left text-neutral-700">
-                    {study.imageAttribution}
-                  </caption>
+                  <div className="px-0.5 flex">
+                    <caption className="text-[11px] text-left text-neutral-400">
+                      {study.imageAttribution}
+                    </caption>
+                  </div>
                 </div>
 
                 <div className="hidden md:flex items-center justify-between mt-4">

@@ -8,12 +8,10 @@ export function Hero() {
         <div className="col-span-12 flex flex-col justify-center">
           <div className="space-y-8">
             <div>
-              <div className="text-5xl md:text-7xl leading-none font-serif text-black tracking-tighter">
-                Kyle Conrad,
-              </div>
-              <div className="text-5xl md:text-7xl leading-none font-serif text-black tracking-tighter">
-                Design Engineer
-              </div>
+              <h1 className="text-5xl md:text-7xl leading-[1.12] font-serif text-black tracking-tighter">
+                I design, code, and measure digital experiences that help users
+                achieve their goals.
+              </h1>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">

@@ -1,5 +1,6 @@
 import capitalize from "lodash/capitalize";
 import { LucideGithub, LucideLinkedin, LucideTwitter } from "lucide-react";
+import React from "react";
 
 export function Footer() {
   const socialLinks = {
@@ -8,7 +9,7 @@ export function Footer() {
     twitter: "https://x.com/history_of_kyle",
   };
 
-  const socialIconMap: Record<string, JSX.Element> = {
+  const socialIconMap: Record<string, React.ReactNode> = {
     github: <LucideGithub />,
     linkedin: <LucideLinkedin />,
     twitter: <LucideTwitter />,

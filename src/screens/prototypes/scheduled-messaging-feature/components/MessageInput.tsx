@@ -1,11 +1,11 @@
-import { useState, useRef } from "react";
-import { Send, Smile } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { Send, Smile } from "lucide-react";
+import React, { useRef, useState } from "react";
 import { SchedulePopover } from "./SchedulePopover";
 
 interface MessageInputProps {

@@ -1,7 +1,7 @@
-import { useParams, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { caseStudiesData, caseStudyModules } from "../utils/caseStudies";
 import { MDXWrapper } from "./MDXWrapper";
-import { caseStudyModules, caseStudiesData } from "../utils/caseStudies";
 
 export function CaseStudyDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -29,14 +29,14 @@ export function CaseStudyDetail() {
         const MDXComponent = caseStudyModules[slug];
         setMDXContent(() => MDXComponent);
         setLoading(false);
-      } catch (err) {
+      } catch {
         setError(true);
         setLoading(false);
       }
     };
 
     loadCaseStudy();
-  }, [slug]);
+  }, [frontmatter, slug]);
 
   if (loading) {
     return (

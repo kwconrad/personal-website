@@ -1,5 +1,5 @@
-import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
+import * as React from "react";
 import { cn } from "./utils";
 
 interface ButtonProps {
@@ -60,4 +60,4 @@ const Button = React.forwardRef<
 
 Button.displayName = "Button";
 
-export { Button, getButtonClasses };
+export { Button };

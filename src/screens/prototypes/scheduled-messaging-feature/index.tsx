@@ -100,7 +100,7 @@ export default function ScheduledMessagingPrototype() {
 
   return (
     <main className="flex-col h-full flex-grow flex items-center justify-center">
-      <div className="h-full md:h-[90%] md:w-[414px] w-full flex flex-col bg-black text-white max-w-md mx-auto">
+      <div className="h-full md:w-[414px] w-full flex flex-col bg-black text-white max-w-md mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between p-4 bg-black border-b border-gray-800">
           <div className="flex items-center gap-3">
@@ -138,20 +138,16 @@ export default function ScheduledMessagingPrototype() {
 
         {/* Scheduled Messages Icon */}
         {scheduledMessages.length > 0 && (
-          <div className="m-2 bg-neutral-800 flex justify-center py-2 rounded-md">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setShowScheduledPanel(true)}
-              className="text-neutral-300 rounded-full flex gap-1"
-            >
-              <Clock className="h-4 w-4" />
-              <span>View scheduled messages</span>
-              <div className="text-neutral-200 py-1 text-xs px-2 bg-neutral-600 rounded-md">
-                {scheduledMessages.length}
-              </div>
-            </Button>
-          </div>
+          <button
+            className="p-2 w-full flex justify-center items-center gap-2 py-2 rounded-md"
+            onClick={() => setShowScheduledPanel(true)}
+          >
+            <Clock className="h-4 w-4" />
+            <span>View scheduled messages</span>
+            <div className="text-neutral-50 font-medium text-[11px] h-5 w-5 flex items-center justify-center bg-neutral-600 rounded-md">
+              {scheduledMessages.length}
+            </div>
+          </button>
         )}
 
         {/* Message Input */}

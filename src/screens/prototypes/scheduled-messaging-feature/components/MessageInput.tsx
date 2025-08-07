@@ -78,17 +78,18 @@ export function MessageInput({
   };
 
   return (
-    <div className="p-4 bg-black border-t border-gray-800">
+    <div className="p-4 bg-black border-t border-neutral-800">
       {/* Message Input */}
       <div className="flex items-center gap-3">
-        <Smile className="h-5 w-5 text-gray-400" />
+        <Smile className="h-5 w-5 text-neutral-400" />
         <div className="flex-1 relative">
-          <Input
+          <input
+            type="text"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Message"
-            className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 rounded-full pr-12"
+            className="h-10 px-4 w-full bg-neutral-800 text-white placeholder-neutral-300 focus:outline-none focus:ring-0 rounded-md pr-12"
           />
         </div>
 
@@ -115,7 +116,7 @@ export function MessageInput({
           <PopoverContent
             side="top"
             align="end"
-            className="w-80 p-0 bg-gray-900 border-gray-700 text-white"
+            className="w-80 p-0 bg-neutral-900 border-neutral-700 text-white"
             sideOffset={8}
           >
             <SchedulePopover

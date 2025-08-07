@@ -83,7 +83,7 @@ export function ScheduledMessagesPanel({
       <Sheet open={isOpen} onOpenChange={onClose}>
         <SheetContent
           side="bottom"
-          className="bg-neutral-900 border-neutral-700 text-white h-[70vh]"
+          className="bg-neutral-900 border-neutral-700 text-white h-[70vh] max-w-[414px] mx-auto"
         >
           <SheetHeader>
             <SheetTitle className="flex items-center justify-between text-white">

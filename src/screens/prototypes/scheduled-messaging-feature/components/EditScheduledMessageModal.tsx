@@ -73,7 +73,7 @@ export function EditScheduledMessageModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md bg-neutral-900 border-neutral-700 text-white">
+      <DialogContent className="w-[396px] bg-neutral-900 border-neutral-700 text-white">
         <DialogHeader>
           <DialogTitle>Edit Scheduled Message</DialogTitle>
           <DialogDescription className="text-neutral-400">

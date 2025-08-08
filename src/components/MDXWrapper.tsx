@@ -71,7 +71,7 @@ const components = {
   ),
   blockquote: ({ children, ...props }: any) => (
     <blockquote
-      className="border-l-4 border-black/20 my-6 p-6 bg-black/5 italic text-black/80"
+      className="my-6 p-6 bg-amber-300 rounded-md italic text-black"
       {...props}
     >
       {children}
